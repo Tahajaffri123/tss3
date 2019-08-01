@@ -1,5 +1,5 @@
 <?php
-// hello
+// hello world
 $arr1=array("red", "green", "blue");
 $arr2=array("a"=>"rohit", "b"=>"gaurav", "c"=>$arr1);
 
