@@ -1,0 +1,9 @@
+<?php
+$a=$_post['f-name'];
+$b=$_post['username'];
+$c=$_post['pass'];
+$d=$_post['contact'];
+$e=$_post['add'];
+$g=$_post['city'];
+$h=$_post['gender'];
+?>

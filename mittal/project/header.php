@@ -17,11 +17,11 @@
 <body>
 	<div class="container-fluid my-bg font-weight-bold"> 
 			<div class="row">
-				<div class="col-md-4">
-					<img src="property_img/logo.png" class="img-thumbnail" height="100px" width="100px">
-				</div>
-				<div class="col-md-7">
-					<p class="m-0 pt-5 font-weight-bold">Best Place for Buy and Rent Property in Indore</p>
+					<div class="col-md-1 offset-1 p-0">
+	                <img src="property_img/logo.png" class="img-thumbnail" height="100px" width="100px">
+			       </div>
+				<div class="col-md-5 offset-md-2">
+					<p class="m-0 pt-4 font-weight-bold">Best Place for Buy and Rent Property in Indore</p>
 				</div>
 			</div> 
 	</div>
