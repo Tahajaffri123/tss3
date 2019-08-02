@@ -2,14 +2,8 @@
 <html>
 <head>
 	<title></title>
-	<style type="text/css">
-		.navbar-toggler {
-		  border-color: rgb(0,0,0) !important;
-		}
-	</style>
 	<meta name="viewport" content="width=device-width, 
 	initial-scale=1">
-
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -61,12 +55,9 @@
 							<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
 					</div>
 				</div>
-
 			</div>
 		</div>
-	
-</div>
-
+	</div>
 <div class="container content">
 	<div class="row">
 		<div class="col-md-3">
@@ -77,6 +68,5 @@
 				<li class="list-group-item">
 					<a href="#" class="list-group-link"> Buy</a>
 				</li>
-
-			</ul>
+              </ul>
 		</div>
