@@ -5,6 +5,7 @@ include('header.php');
 			<h5 class="my-bg p-2">User Register</h5>
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
+					<form action="save.php" method="post">
 					<div class="card mb-4">
 						<div class="card-header">
 							<h5>Signup, Already Registered <a href="login.html">Click Here</a> </h5>
@@ -12,15 +13,15 @@ include('header.php');
 						<div class="card-body">
 							<div class="form-group">
 								<label>Full Name</label>
-								<input type="text" placeholder="Full Name" class="form-control">
+								<input type="text" name="f_name" placeholder="Full Name" class="form-control">
 							</div>
 							<div class="form-group">
 								<label>Username/Email</label>
-								<input type="text" placeholder="Username/Email" class="form-control">
+								<input type="text" name="username" placeholder="Username/Email" class="form-control">
 							</div>
 							<div class="form-group">
 								<label>Password</label>
-								<input type="password" placeholder="Password" class="form-control">
+								<input type="password" name="pass" placeholder="Password" class="form-control">
 							</div>
 							<div class="form-group">
 								<label>Re-Password</label>
@@ -28,22 +29,22 @@ include('header.php');
 							</div>
 							<div class="form-group">
 								<label>Contact</label>
-								<input type="text" placeholder="Contact" class="form-control">
+								<input type="text" name="contact" placeholder="Contact" class="form-control">
 							</div>
 							<div class="form-group">
 								<label>Gender</label>
 								<Br/>
-								<input type="radio" name="gender"/>Male
-								<input type="radio" name="gender"/>Female
+								<input type="radio" name="gender" value="male"/>Male
+								<input type="radio" name="gender" value="female" />Female
 							</div>
 							<div class="form-group">
 								<label>Address</label>
-								<textarea placeholder="Address" class="form-control"></textarea>
+								<textarea placeholder="Address" name="add" class="form-control"></textarea>
 							</div>
 
 							<div class="form-group">
 								<label>City</label>
-								<select class="form-control">
+								<select class="form-control" name="city">
 									<option>Select</option>
 									<option>Indore</option>
 									<option>Bhopal</option>
@@ -59,6 +60,7 @@ include('header.php');
 						</div>
 
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>
