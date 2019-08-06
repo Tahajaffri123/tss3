@@ -16,8 +16,8 @@ include("header.php");
            						<input type="text" class="form-control" name="f-name"placeholder="Enter Full Name">
            					</div>
            					<div class="form-group">
-           						<label>Username</label>
-           						<input type="text" class="form-control" name="Username"placeholder="Enter Username"> 
+           						<label>Username/Email-id</label>
+           						<input type="text" class="form-control" name="Username"placeholder="Enter Username/Email-id"> 
            					</div>
            					<div class="form-group">
            						<label>Password</label>
@@ -25,7 +25,7 @@ include("header.php");
            					</div>
            					<div class="form-group">
            						<label>Conform Password</label>
-           						<input type="text" class="form-control" placeholder="Conform Password"> 
+           						<input type="Password" class="form-control" placeholder="Conform Password"> 
            					</div>
            					<div class="form-group">
            						<label>Contact No.</label>
