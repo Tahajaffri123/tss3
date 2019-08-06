@@ -3,7 +3,7 @@
 // Connection Stable
 // $valiable = mysqli_connect(hostname, username, password, dbname)
 // $con = mysqli_connect("localhost", "root", "", "tss3");
-$con = mysqli_connect("localhost", "admin", "admin", "tss3");
+include("db.php");
 // create database connection
 
 $a = $_POST['f_name'];
