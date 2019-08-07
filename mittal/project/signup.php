@@ -13,11 +13,11 @@ include("header.php");
            				<div class="card-body">
            					<div class="form-group">
            						<label>Full Name</label>
-           						<input type="text" class="form-control" name="f-name"placeholder="Enter Full Name">
+           						<input type="text" class="form-control" name="f_name"placeholder="Enter Full Name">
            					</div>
            					<div class="form-group">
            						<label>Username/Email-id</label>
-           						<input type="text" class="form-control" name="Username"placeholder="Enter Username/Email-id"> 
+           						<input type="text" class="form-control" name="username"placeholder="Enter Username/Email-id"> 
            					</div>
            					<div class="form-group">
            						<label>Password</label>
