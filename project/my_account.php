@@ -1,12 +1,26 @@
 <?php
 include("db.php");
-include("header.php");
+// Backdoor Protaction Code
+if(! isset($_SESSION['is_user_logged_in']))
+{
+	header("location:login.php");
+}
 
+
+
+
+
+include("header.php");
+// print_r($_SESSION);
 ?>
 		<div class="col-md-9">
-			<h5 class="my-bg p-2">User Login</h5>
+			<h5 class="my-bg p-2">Account</h5>
 			<div class="row">
-				<h2>My Account Page</h2>
+				<div class="col-md-12">
+					
+					<br />
+					<h4>Welcome : <?php echo $_SESSION['name']; ?></h4>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -36,12 +36,32 @@
 		</li>
 	</ul>
 	<ul class="navbar-nav ml-auto">
-		<li class="nav-item">
-			<a class="nav-link" href="login.php">Login</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="signup.php">Register</a>
-		</li>
+		<?php
+		if(isset($_SESSION['is_user_logged_in']))
+		{ ?>
+			<li class="nav-item">
+				<a class="nav-link" href="post_property.php">Post Your Property</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="my_account.php">My Account</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="logout.php">Logout</a>
+			</li>
+		<?php
+		}
+		else
+		{ ?>
+
+			<li class="nav-item">
+				<a class="nav-link" href="login.php">Login</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="signup.php">Register</a>
+			</li>
+		<?php
+		}
+		?>
 	</ul>
 	</div>
 </nav>
