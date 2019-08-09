@@ -8,7 +8,7 @@ include("db.php");
 
 $a = $_POST['f_name'];
 $b = $_POST['username'];
-$c = $_POST['pass'];
+$c = sha1($_POST['pass']);
 $d = $_POST['contact'];
 $e = $_POST['gender'];
 $f = $_POST['add'];
