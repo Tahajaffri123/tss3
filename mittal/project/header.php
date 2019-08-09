@@ -39,36 +39,39 @@
 			<li class="nav-item">
 				<a class="nav-link" href="#"><i class="fa fa-phone" aria-hidden="true"> Contact </i></a>
 			</li>
-		</ul>
-		<ul class="navbar-nav ml-auto">
 			<?php
-			if(isset($_SESSION["is_user_logged_in"]))
+			if(! isset($_SESSION["is_user_logged_in"]))
 			{
 				?>
 				<li class="nav-item">
-					<a class="nav-link" href="post_property.php">post_property</a>
+					<a class="nav-link" href="login.php">Login</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="my_account.php">My Account</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a>
+					<a class="nav-link" href="signup.php">Register</a>
 				</li>
 				<?php
 			}
-			else
-			{
-			?>
-
-			<li class="nav-item">
-				<a class="nav-link" href="login.php"><i class="fa fa-lock"> Login </i></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="signup.php"><i class="fa fa-user"> Sign-up </i></a>
-			</li>
-			<?php
-			}
 			?>
 		</ul>
+        <?php
+        if(isset($_SESSION['is_user_logged_in']))
+        {
+        ?>
+        <ul class="navbar-nav ml-auto" style="margin-right: 80px;">
+        	<li class="dropdown nav-item">
+        		<a data-toggle="dropdown" href="#" class="nav-link dropdown-toggle"><?php echo $_SESSION['name']?></a>
+        		<div class="dropdown-menu">
+        			<a class="dropdown-item" href="post_property.php">Post Proprety</a>
+        			<a class="dropdown-item" href="my_property.php">My Property</a>
+			
+			
+				<a class="dropdown-item" href="logout.php">Logout</a>
+			</div>
+		</li>
+	</ul>
+	<?php
+}
+?>
 	</div>
 </nav>
 	<div class=" jumbotron jumbotron-fluid slider">

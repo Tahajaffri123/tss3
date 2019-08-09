@@ -5,6 +5,8 @@
 	background-color: #5DADE2 !important;
 	color: #FFF !important;
 	/*font-size: 14px;*/
+	margin-right: -95px !important;
+	margin-left: 85px !important;
 }
 .slider{
 	background-image: url("../image/slider-bg.jpg");

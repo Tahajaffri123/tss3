@@ -1,5 +1,8 @@
 <?php
+include("dbinfo.php");
 include("header.php");
+$que = "SELECT * FROM property ORDER BY date desc";
+$result= mysqli_query($con,$que);
 ?>
 <div class="container content">
 		<div class="row">
@@ -15,6 +18,10 @@ include("header.php");
 			</div>
 			<div class="col-md-9">
 				<h5 class="my-bg p-2">Latest Property</h5>
+				<?php
+				while (mysqli_fetch_assoc($result)) 
+				{
+				?>
 				<div class="card md-3">
 					<div class="card-body">
 						<div class="row">
@@ -22,7 +29,7 @@ include("header.php");
 								<img src="property_img/2.jpeg" height="150" class="img-thamnail">
 							</div>
 							<div class="col-md-7">
-								<h4>Nem Row house for sell</h4>
+								<h4><?php echo</h4>
 								<p><strong> Price :</strong>10,00000 </p>
 								<p><strong> Location :</strong> Bangali Square </p>
 							</div>

@@ -1,9 +1,9 @@
 <?php
 include("dbinfo.php");
-if(isset($_SESSION['is_user_
-	is_logedin']))
+
+if(! isset($_SESSION['is_user_logged_in']))
 {
-	header("location : login.php");
+	header("location:login.php");
 }
 include("header.php");
 ?>
