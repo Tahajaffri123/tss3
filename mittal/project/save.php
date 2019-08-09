@@ -9,7 +9,7 @@ include("dbinfo.php");
 //connection stablre
 $a=$_POST['f_name'];
 $b=$_POST['username'];
-$c=$_POST['pass'];
+$c=sha1($_POST['pass']);
 $d=$_POST['contact'];
 $e=$_POST['add'];
 $f=$_POST['city'];

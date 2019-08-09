@@ -1,4 +1,5 @@
 <?php
+include("dbinfo.php");
 include("header.php");
 ?>
 <div class="container content">
@@ -13,11 +14,11 @@ include("header.php");
            				<div class="card-body">
            					<div class="form-group">
            						<label>Username</label>
-           						<input type="text" class="form-control"placeholder="Enter Username" name="Username">
+           						<input type="text" class="form-control"placeholder="Enter Username" name="username">
            					</div>
            					<div class="form-group">
            						<label>Password</label>
-           						<input type="password" class="form-control" placeholder="Enter Password" name="Pass"> 
+           						<input type="password" class="form-control" placeholder="Enter Password" name="pass"> 
            					</div>
            				</div>
            				<div class="card-footer text-center">
