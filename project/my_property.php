@@ -34,12 +34,6 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['title'];?></td>
 								<td><?php echo $data['price'];?></td>
 								<td><?php echo $data['type'];?></td>
-
-
-
-
-
-
 						<?php 
 						$n++;
 						}
