@@ -14,10 +14,23 @@ include("header.php");
 			<div class="row">
 					
 				<div class="col-md-8 offset-md-2">
-				<form action="save_property.php" method="post">
+				<form action="save_property.php" method="post" enctype="multipart/form-data">
 					<div class="form-group">		
 						<label>Title</label>
 						<input name="title" type="text" class="form-control">
+					</div>
+					<div class="form-group">		
+						<label>Property Image</label>
+						<input name="image" type="file" class="form-control">
+						<p class="text-danger">
+							<?php
+							if(isset($_SESSION['msg']))
+							{
+								echo $_SESSION['msg'];
+								unset($_SESSION['msg']);
+							}
+							?>
+						</p>
 					</div>			
 					<div class="form-group">		
 						<label>Type</label>

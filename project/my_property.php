@@ -24,6 +24,7 @@ $result = mysqli_query($con, $que);
 							<th>Title</th>
 							<th>Price</th>
 							<th>Type</th>
+							<th>Image</th>
 						</tr>
 						<?php
 						$n=1;
@@ -34,6 +35,7 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['title'];?></td>
 								<td><?php echo $data['price'];?></td>
 								<td><?php echo $data['type'];?></td>
+								<td><img src="property_img/<?php echo $data['image'] ?>" height="80" width="80">
 						<?php 
 						$n++;
 						}

@@ -18,12 +18,13 @@ $result = mysqli_query($con, $que);
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-5">
-							<img src="property_img/1.jpeg" height="150" class="img-thumbnail">
+							<img src="property_img/<?php echo $data['image'] ?>" height="150" class="img-thumbnail">
 						</div>
 						<div class="col-md-7">
 							<h4><?php echo $data['title']; ?></h4>
 							<p><strong>Price : </strong><?php echo $data['price'] ?></p>
 							<p><strong>Location : </strong><?php echo $data['location'] ?></p>
+							<p>Type : <b class="badge badge-pill badge-primary"><?php echo $data['perpose']; ?></b></p>
 						</div>
 					</div>
 				</div>
