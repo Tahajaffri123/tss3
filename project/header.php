@@ -61,6 +61,7 @@
 				
 				<a class="dropdown-item" href="post_property.php">Post Property</a>
 				<a class="dropdown-item" href="my_property.php">My Property</a>
+				<a class="dropdown-item" href="my_profile.php">My Profile</a>
 			
 			
 				<a class="dropdown-item" href="logout.php">Logout</a>
@@ -93,10 +94,10 @@
 		<div class="col-md-3">
 			<ul class="list-group">
 				<li class="list-group-item">
-					<a href="#" class="list-group-link"> Rent</a>
+					<a href="index.php?type=rent" class="list-group-link"> Rent</a>
 				</li>
 				<li class="list-group-item">
-					<a href="#" class="list-group-link"> Buy</a>
+					<a href="index.php?type=sell" class="list-group-link"> Buy</a>
 				</li>
               </ul>
 		</div>

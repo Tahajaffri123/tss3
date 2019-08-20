@@ -17,7 +17,7 @@ $result = mysqli_query($con, $que);
 		<div class="col-md-9">
 			<h5 class="my-bg p-2">My Property</h5>
 			<div class="row">
-				<div class="col-md-10 offset-md-1">
+				<div class="col-md-12">
 					<table class="table table-hover table-dark table-bordered">
 						<tr>
 							<th>S.No.</th>
@@ -25,6 +25,9 @@ $result = mysqli_query($con, $que);
 							<th>Price</th>
 							<th>Type</th>
 							<th>Image</th>
+							<th>Detail</th>
+							<th>Edit</th>
+							<th>Delete</th>
 						</tr>
 						<?php
 						$n=1;
@@ -36,6 +39,9 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['price'];?></td>
 								<td><?php echo $data['type'];?></td>
 								<td><img src="property_img/<?php echo $data['image'] ?>" height="80" width="80">
+								<td><a href="detail.php?detail=<?php echo $data['id'];  ?>" class="btn btn-sm btn-secondary">Detail</a></td>	
+								<td><a href="#" class="btn btn-sm btn-info">Edit</a></td>
+								<td><a href="delete_property.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-danger">Delete</a></td>
 						<?php 
 						$n++;
 						}
