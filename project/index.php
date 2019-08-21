@@ -2,6 +2,29 @@
 include("db.php");
 include("header.php");
 $que = "SELECT * FROM property ORDER BY date desc";
+if(isset($_GET['type']))
+{
+	$a = $_GET['type'];
+	if($a=="sell")
+	{
+		$que = "SELECT * FROM property WHERE perpose = 'For Sell' ORDER BY date desc";
+
+	}
+	if($a=="rent")
+	{
+
+		$que = "SELECT * FROM property WHERE perpose = 'For Rent' ORDER BY date desc";
+	}
+}
+
+
+
+
+
+
+
+
+
 $result = mysqli_query($con, $que);
 ?>
 		<div class="col-md-9">
