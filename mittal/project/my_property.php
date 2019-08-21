@@ -30,7 +30,7 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['title'];?></td>
 								<td><?php echo $data['type'];?></td>	
 								<td><?php echo $data['price'];?></td>	
-								<td><img src="property_img/<?php echo $data['image']?>" height=80px width=80px></td>
+								<td><img src="property_img/<?php echo $data['image']?>" height=100px width=100px></td>
 							</tr>
 					    <?php
 						}

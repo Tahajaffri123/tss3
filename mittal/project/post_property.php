@@ -11,7 +11,7 @@ include("header.php");
       <div class="row">
                               
                         <div class="col-md-7 offset-md-3">
-                        <form action="save_property.php" method="post">
+                        <form action="save_property.php" method="post" enctype="multipart/form-data">
                             <div class="card bg-dark text-light">
                                     <div class="card-header">
                                           <h3 class="text-center">Post-Your-Property</h3>
@@ -24,6 +24,14 @@ include("header.php");
                         <div class="form-group">
                         <label>Property Image</label>
                         <input name="image" type="file" class="form-control">
+                        <p class="text-danger">
+                        <?php
+                        if(isset($_SESSION['msg']))
+                        {
+                          echo $_SESSION['msg'];
+                          unset($_SESSION['msg']);
+                        }
+                        ?> 
                         </div>                 
                         <div class="form-group">            
                            <label>Type</label>
