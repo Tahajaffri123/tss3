@@ -10,9 +10,9 @@ include("header.php");
 
       <div class="row">
                               
-                        <div class="col-md-8 offset-md-2">
+                        <div class="col-md-7 offset-md-3">
                         <form action="save_property.php" method="post">
-                              <div class="card">
+                            <div class="card bg-dark text-light">
                                     <div class="card-header">
                                           <h3 class="text-center">Post-Your-Property</h3>
                                     </div>
@@ -20,7 +20,11 @@ include("header.php");
                   <div class="form-group">            
                       <label>Title</label>
                               <input name="title" type="text" class="form-control">
-                        </div>                  
+                        </div> 
+                        <div class="form-group">
+                        <label>Property Image</label>
+                        <input name="image" type="file" class="form-control">
+                        </div>                 
                         <div class="form-group">            
                            <label>Type</label>
                           <select class="form-control" name="type">

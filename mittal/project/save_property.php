@@ -10,8 +10,8 @@ if(! isset($_SESSION['is_user_logged_in']))
 
 $a=$_POST['title'];
 $b=$_POST['type'];
-$c=$_POST['area'];
-$e=$_POST['price'];
+$c=$_POST['price'];
+$e=$_POST['area'];
 $f=$_POST['location'];
 $h=$_POST['perpose'];
 $i=$_POST['address'];
