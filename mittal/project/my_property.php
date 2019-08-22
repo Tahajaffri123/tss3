@@ -9,10 +9,10 @@ $id = $_SESSION['id'];
 $que = "SELECT * FROM property WHERE user_id = $id";
 $result = mysqli_query($con, $que); 
  ?>
- <div class="col-md-8 offset-md-2">
+ <div class="col-md-9 offset-md-2">
 			<h5 class="my-bg p-2 text-center">My Property</h5>
 			<div class="row">
-				<div class="col-md-10 offset-md-1">
+				<div class="col-md-12">
 					<table class="table table-hover table-dark table-bordered">
 						<tr>
 							<td>S.No.</td>
@@ -20,6 +20,9 @@ $result = mysqli_query($con, $que);
 							<td>Type</td>
 							<td>Price</td>
                             <td>Image</td>
+                            <td>Detail</td>
+                            <td>Edit</td>
+                            <td>Delete</td>
 						</tr>
 						<?php
 						$n=1;
@@ -31,6 +34,9 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['type'];?></td>	
 								<td><?php echo $data['price'];?></td>	
 								<td><img src="property_img/<?php echo $data['image']?>" height=100px width=100px></td>
+								<td><a href="detail.php?detail=<?php echo $data['id']?>" class="btn btn-info btn-sm">Detail</a></td>
+								<td><a href="Edit.php" class="btn btn-info btn-sm">Edit</a></td>
+								<td><a href="delete.php?id=<?php echo $data['id']; ?>" class="btn  btn-danger btn-sm">Delete</a></td> 
 							</tr>
 					    <?php
 						}

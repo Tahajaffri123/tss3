@@ -41,7 +41,7 @@ $result = mysqli_query($con, $que);
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-5">
-							<img src="property_img/<?php echo $data['image'] ?>" height="150" class="img-thumbnail">
+							<img src="property_img/<?php echo $data['image'] ?>" height="145" class="img-thumbnail">
 						</div>
 						<div class="col-md-7">
 							<h4><?php echo $data['title']; ?></h4>
@@ -55,7 +55,7 @@ $result = mysqli_query($con, $que);
 					<button class="btn btn-dark btn-sm d-block float-right">Detail</button>
 				</div>
 		</div>
-
+		
 
 		<?php
 		}
