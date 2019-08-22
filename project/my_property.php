@@ -40,7 +40,7 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['type'];?></td>
 								<td><img src="property_img/<?php echo $data['image'] ?>" height="80" width="80">
 								<td><a href="detail.php?detail=<?php echo $data['id'];  ?>" class="btn btn-sm btn-secondary">Detail</a></td>	
-								<td><a href="#" class="btn btn-sm btn-info">Edit</a></td>
+								<td><a href="edit_property.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-info">Edit</a></td>
 								<td><a href="delete_property.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-danger">Delete</a></td>
 						<?php 
 						$n++;
