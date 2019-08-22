@@ -28,7 +28,11 @@ $data = mysqli_fetch_assoc($result);
 						<label>Title</label>
 						<input name="title" value="<?php echo $data['title']; ?>" type="text" class="form-control">
 					</div>
-					<!-- <div class="form-group">		
+					<div class="form-group">		
+						<label>Current Image</label>
+						<img src="property_img/<?php echo $data['image'] ?>" height="100" width="100" />
+					</div>
+					<div class="form-group">		
 						<label>Property Image</label>
 						<input name="image" type="file" class="form-control">
 						<p class="text-danger">
@@ -40,7 +44,7 @@ $data = mysqli_fetch_assoc($result);
 							}
 							?>
 						</p>
-					</div>		 -->	
+					</div>			
 					<div class="form-group">		
 						<label>Type</label>
 						<select class="form-control" name="type">
