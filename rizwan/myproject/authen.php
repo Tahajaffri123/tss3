@@ -10,7 +10,7 @@ if(mysqli_num_rows($result)==1)
 {
 	$data=mysqli_fetch_assoc($result);
 
-	if($data['pass']==$p)
+	if($data['pass']==sha1($p))
 	{
 		$_SESSION['name']=$data['fullname'];
 		$_SESSION['id']=$data['id'];

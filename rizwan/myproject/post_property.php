@@ -1,19 +1,26 @@
 <?php
 include("db.php");
-// Backdoor Protaction Code
 if(! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:login.php");
 }
 
+
+
+
+
 include("header.php");
 // print_r($_SESSION);
+// die;
 ?>
-		<div class="col-md-9">
-			<h5 class="my-bg p-2">Post Your Property</h5>
+		<div class="container-fluid back-new">
+<div class="container content login-content">
+	<div class="row back-new" >
+		<div class="col-md-8 offset-md-2 new-content">
+			<div class="col-md-9">
+			<h5 class="user-back p-2 text-center">Post Your Property</h5>
 			<div class="row">
-					
-				<div class="col-md-8 offset-md-2">
+				<div class="col-md-12 offset-md-2">
 				<form action="save_property.php" method="post" enctype="multipart/form-data">
 					<div class="form-group">		
 						<label>Title</label>
@@ -21,7 +28,7 @@ include("header.php");
 					</div>
 					<div class="form-group">		
 						<label>Property Image</label>
-						<input name="image" type="file" class="form-control" enctype = 'multipart/form-data'>
+						<input name="image" type="file" class="form-control">
 						<p class="text-danger">
 							<?php
 							if(isset($_SESSION['msg']))
@@ -31,7 +38,7 @@ include("header.php");
 							}
 							?>
 						</p>
-					</div>			
+					</div>	
 					<div class="form-group">		
 						<label>Type</label>
 						<select class="form-control" name="type">
@@ -89,7 +96,7 @@ include("header.php");
 					</div>
 					<div class="form-group">			
 						<label>Details</label>
-						<textarea name="detail" class="form-control"></textarea>
+						<textarea name="details" class="form-control"></textarea>
 					</div>
 					<input type="submit" value="Post" class="btn btn-primary">
 
@@ -101,9 +108,10 @@ include("header.php");
 
 			</div>
 		</div>
+		</div>
 	</div>
 </div>
-
+</div>
 <?php
-include("footer.php");
+include('footer.php');
 ?>
