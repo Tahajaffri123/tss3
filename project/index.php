@@ -18,6 +18,18 @@ if(isset($_GET['type']))
 	}
 }
 
+if(isset($_GET['q']))
+{
+	$q = $_GET['q']; // bangli
+
+	$q_upper=strtoupper($q); // BANGALI
+	$q_lower=strtolower($q); // bangali
+
+	$que = "SELECT * FROM property WHERE location LIKE '%$q_upper%' OR location LIKE'%$q_lower%' OR address LIKE '%$q_upper%' OR address LIKE '%$q_lower%' OR title LIKE '%$q_lower%' OR title LIKE '%$q_upper%'";
+
+}
+
+
 
 
 
