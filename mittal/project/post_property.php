@@ -93,7 +93,7 @@ include("header.php");
                                     <textarea name="detail" class="form-control"></textarea>
                               </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer text-center">
                           <button class="btn btn-primary center-block">Post</button>
                         </div>
                            </div>

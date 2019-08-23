@@ -1,5 +1,7 @@
 <?php
 include("db.php");
+// print_r($_POST);
+//        die;
 if(! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:login.php");
