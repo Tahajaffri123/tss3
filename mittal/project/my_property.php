@@ -35,7 +35,7 @@ $result = mysqli_query($con, $que);
 								<td><?php echo $data['price'];?></td>	
 								<td><img src="property_img/<?php echo $data['image']?>" height=100px width=100px></td>
 								<td><a href="detail.php?detail=<?php echo $data['id']?>" class="btn btn-info btn-sm">Detail</a></td>
-								<td><a href="Edit.php" class="btn btn-info btn-sm">Edit</a></td>
+								<td><a href="edit_property.php?id=<?php echo $data['id']; ?> " class="btn btn-info btn-sm">Edit</a></td>
 								<td><a href="delete.php?id=<?php echo $data['id']; ?>" class="btn  btn-danger btn-sm">Delete</a></td> 
 							</tr>
 					    <?php

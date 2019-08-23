@@ -6,7 +6,7 @@ include('header.php');
 			<h5 class="my-bg p-2">Update Password</h5>
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
-					<form action="update_password.php" method="post">
+					<form action="update.php" method="post">
 					<div class="card mb-4">
 						<div class="card-header">
 							<h3>Change Your Password</h3>

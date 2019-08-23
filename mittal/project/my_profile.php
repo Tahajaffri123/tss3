@@ -42,6 +42,11 @@ $data = mysqli_fetch_assoc($result);
 								<td><?php echo $data['address'] ?></td>
 							</tr>
 							<tr>
+								<td>Gender</td>
+								<td><?php echo $data['gender']; 
+								?></td>
+								</tr>
+							<tr>
 								<td>City</td>
 
 								<td><?php echo $data['city'] ?></td>

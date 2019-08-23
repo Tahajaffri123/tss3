@@ -57,10 +57,9 @@ $data = mysqli_fetch_assoc($result);
 									<option <?php if($data['city']=='Bhopal') echo "selected='selected'" ?>>Bhopal</option>
 									<option <?php if($data['city']=='Delhi') echo "selected='selected'" ?>>Delhi</option>
 									<option <?php if($data['city']=='Pune') echo "selected='selected'" ?>>Pune</option>
-								</select>
+							</select>
 								
 							</div>
-
 						</div>
 						<div class="card-footer">
 							<button type="submit" class="btn btn-dark">Edit</button>
