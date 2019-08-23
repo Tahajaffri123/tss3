@@ -62,10 +62,9 @@
         		<a data-toggle="dropdown" href="#" class="nav-link dropdown-toggle"><?php echo $_SESSION['name']?></a>
         		<div class="dropdown-menu">
         			<a class="dropdown-item" href="post_property.php">Post Proprety</a>
+        			<a class="dropdown-item" href="my_profile.php">My Profile</a>
         			<a class="dropdown-item" href="my_property.php">My Property</a>
-			
-			
-				<a class="dropdown-item" href="logout.php">Logout</a>
+			<a class="dropdown-item" href="logout.php">Logout</a>
 			</div>
 		</li>
 	</ul>

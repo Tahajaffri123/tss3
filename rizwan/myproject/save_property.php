@@ -1,12 +1,11 @@
 <?php
 include("db.php");
-// print_r($_POST);
-//        die;
 if(! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:login.php");
 }
 // print_r($_POST);
+// die;
 $name = $_FILES['image']['name'];
 $tmp_name = $_FILES['image']['tmp_name'];
 $size = $_FILES['image']['size'];
@@ -25,17 +24,17 @@ if($ext=="jpg" || $ext=="jpeg" || $ext=="gif" || $ext=="png")
 	{
 		$a = $_POST['title'];
 		$b = $_POST['type'];
-		$c = $_POST['area'];
-		$d = $_POST['price'];
-		$f = $_POST['location'];
-		$g = $_POST['perpose'];
-		$h = $_POST['address'];
-		$i = $_POST['detail'];
+		$c = $_POST['price'];
+		$d = $_POST['area'];
+		$e = $_POST['location'];
+		$f = $_POST['perpose'];
+		$g = $_POST['address'];
+		$h = $_POST['details'];
 
 
 		$id = $_SESSION['id'];
 
-		$que = "INSERT INTO property (user_id, title, type, price, area, location, perpose, address, detail, image) VALUES ('$id', '$a', '$b', '$d', '$c', '$f', '$g', '$h', '$i', '$new_name')";
+		$que = "INSERT INTO property (user_id, title, type, price, area, location, perpose, address, details,image) VALUES ('$id', '$a', '$b', '$c', '$d', '$e', '$f', '$g', '$h','$new_name')";
 		move_uploaded_file($tmp_name, "property_img/".$new_name);
 		mysqli_query($con, $que);
 		header("location:my_account.php");

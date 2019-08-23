@@ -13,7 +13,7 @@ include("header.php");
 	<div class="col-md-9">
 		<h5 class="my-bg p-2">Account</h5>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 login-content">
 					
 					<br />
 					<h4>Welcome : <?php echo $_SESSION['name']; ?></h4>

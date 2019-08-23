@@ -49,8 +49,8 @@ include("header.php");
                          </div>
            					<div class="form-group">
            						<label>Gender</label><br />
-           						<input type="radio" name="Gender">Mail
-           						<input type="radio" name="Gender">Femail</div>
+           						<input type="radio" name="gender" value="male">Mail
+           						<input type="radio" name="gender" value="femail">Femail</div>
            				</div>
 
            				<div class="card-footer text-center">

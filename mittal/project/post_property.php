@@ -10,9 +10,9 @@ include("header.php");
 
       <div class="row">
                               
-                        <div class="col-md-8 offset-md-2">
-                        <form action="save_property.php" method="post">
-                              <div class="card">
+                        <div class="col-md-7 offset-md-3">
+                        <form action="save_property.php" method="post" enctype="multipart/form-data">
+                            <div class="card bg-dark text-light">
                                     <div class="card-header">
                                           <h3 class="text-center">Post-Your-Property</h3>
                                     </div>
@@ -20,7 +20,19 @@ include("header.php");
                   <div class="form-group">            
                       <label>Title</label>
                               <input name="title" type="text" class="form-control">
-                        </div>                  
+                        </div> 
+                        <div class="form-group">
+                        <label>Property Image</label>
+                        <input name="image" type="file" class="form-control">
+                        <p class="text-danger">
+                        <?php
+                        if(isset($_SESSION['msg']))
+                        {
+                          echo $_SESSION['msg'];
+                          unset($_SESSION['msg']);
+                        }
+                        ?> 
+                        </div>                 
                         <div class="form-group">            
                            <label>Type</label>
                           <select class="form-control" name="type">
@@ -81,7 +93,7 @@ include("header.php");
                                     <textarea name="detail" class="form-control"></textarea>
                               </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer text-center">
                           <button class="btn btn-primary center-block">Post</button>
                         </div>
                            </div>

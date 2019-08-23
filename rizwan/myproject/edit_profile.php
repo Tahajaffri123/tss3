@@ -1,7 +1,6 @@
 <?php
 include("db.php");
-// Backdoor Protaction Code
-if(! isset($_SESSION['is_user_is_logged_in']))
+if(! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:login.php");
 }
@@ -27,11 +26,11 @@ $data = mysqli_fetch_assoc($result);
 						<div class="card-body">
 							<div class="form-group">
 								<label>Full Name</label>
-								<input value="<?php echo $data['full_name']; ?>" type="text" name="f_name" placeholder="Full Name" class="form-control">
+								<input value="<?php echo $data['fullname']; ?>" type="text" name="fullname" placeholder="Full Name" class="form-control">
 							</div>
 							<div class="form-group">
-								<label>Username/Email</label>
-								<input disabled="disabled" value="<?php echo $data['username']; ?>" type="text" name="username" placeholder="Username/Email" class="form-control">
+								<label>Email</label>
+								<input disabled="disabled" value="<?php echo $data['email']; ?>" type="text" name="email" placeholder="Email" class="form-control">
 							</div>
 							
 							<div class="form-group">
@@ -46,7 +45,7 @@ $data = mysqli_fetch_assoc($result);
 							</div>
 							<div class="form-group">
 								<label>Address</label>
-								<textarea placeholder="Address" name="add" class="form-control"><?php echo $data['address']; ?></textarea>
+								<textarea placeholder="Address" name="address" class="form-control"><?php echo $data['address']; ?></textarea>
 							</div>
 
 							<div class="form-group">
@@ -57,12 +56,13 @@ $data = mysqli_fetch_assoc($result);
 									<option <?php if($data['city']=='Bhopal') echo "selected='selected'" ?>>Bhopal</option>
 									<option <?php if($data['city']=='Delhi') echo "selected='selected'" ?>>Delhi</option>
 									<option <?php if($data['city']=='Pune') echo "selected='selected'" ?>>Pune</option>
-							</select>
+								</select>
 								
 							</div>
+
 						</div>
 						<div class="card-footer">
-							<button type="submit" class="btn btn-dark">Edit</button>
+							<button type="submit" class="btn btn-dark">Update</button>
 						</div>
 					</div>
 					</form>
