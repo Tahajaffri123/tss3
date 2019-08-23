@@ -1,4 +1,5 @@
 <?php
+// print_r($_SERVER);
 include("db.php");
 include("header.php");
 $que = "SELECT * FROM property ORDER BY date desc";

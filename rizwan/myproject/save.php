@@ -6,7 +6,7 @@ $con = mysqli_connect("localhost", "root", "", "riz");
 
 $a = $_POST['fullname'];
 $b = $_POST['email'];
-$c = $_POST['pass'];
+$c = sha1($_POST['pass']);
 $d = $_POST['contact'];
 $e = $_POST['gender'];
 $f = $_POST['address'];

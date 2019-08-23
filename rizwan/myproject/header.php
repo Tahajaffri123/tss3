@@ -6,7 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 </head>
@@ -41,15 +41,21 @@ About</a>
 		<?php
 		if(isset($_SESSION['is_user_logged_in']))
 		{ ?>
-			<li class="nav-item">
-				<a class="nav-link" href="post_property.php">Post Your Property</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="my_account.php">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-			</li>
+			<ul class="navbar-nav ml-auto" style="margin-right: 110px;">
+		<li class="dropdown nav-item">
+			<a  data-toggle="dropdown" href="#" class="nav-link dropdown-toggle"><?php echo $_SESSION['name'] ?></a>
+			<div class="dropdown-menu">
+				
+				
+				<a class="dropdown-item" href="post_property.php">Post Property</a>
+				<a class="dropdown-item" href="my_property.php">My Property</a>
+				<a class="dropdown-item" href="my_profile.php">My Profile</a>
+				<a class="dropdown-item" href="logout.php">Logout</a>
+			
+			
+			</div>
+		</li>
+	</ul>
 		<?php
 		}
 		else
