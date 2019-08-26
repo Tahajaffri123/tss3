@@ -2,14 +2,15 @@
  include("dbinfo.php");
 include('header.php');
 ?>
-		<div class="col-md-9">
-			<h5 class="my-bg p-2">Update Password</h5>
+		<div class="col-md-8 offset-md-2">
+			<h5 class="my-bg p-2 text-center">Change Password</h5>
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
-					<form action="update.php" method="post">
-					<div class="card mb-4">
+					<div class="card bg-dark text-light">
 						<div class="card-header">
-							<h3>Change Your Password</h3>
+						<div class="card-header text-center"><h4>Change Your Password</h4></div>
+		
+					
 						</div>
 						<div class="card-body">
 							

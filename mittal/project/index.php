@@ -16,6 +16,15 @@ include("header.php");
  	}
  }
 
+ if(isset($_GET['q']))
+ {
+ 	$q = $_GET['$q'];
+ 	$q_upper = strtoupper($q);
+ 	$q_lower = strtolower($q);
+
+ 	$que = "SELECT * FROM property WHERE location LIKE '%$q_upper%' OR location LIKE '%$q_lower%' OR address LIKE '%$q_upper%' OR address LIKE '%$q_lower%' OR title LIKE '%$q_upper%' OR title LIKE '%$q_lower%'";
+ }
+
 
  
 $result= mysqli_query($con,$que);
@@ -54,9 +63,11 @@ $result= mysqli_query($con,$que);
 						</div>
 					</div>
 					<div class="card-footer text-center">
-						<a href="detail_home.php?detail=<?php echo $data['id']; ?>" class="btn btn-primary ">Detail</a>
+						<a href="detail_home.php?detail=<?php echo $data['id']; ?>" class="btn btn-primary">Detail</a>
+					
 					</div>
 				</div>
+
 				<?php
 			}
 			?>

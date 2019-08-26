@@ -75,6 +75,7 @@
 </nav>
 	<div class=" jumbotron jumbotron-fluid slider">
 		<div class="col-md-6 offset-md-3">
+			<form action="index.php" method="get">
 			<div class="form-group mt-4 pt-4">
 				<div class="input-group">
 					<input type="text" placeholder="Search Property" class="form-control">
@@ -83,5 +84,6 @@
 					</div>
 			    </div>
 			</div>
+		</form>
 		</div>
 	</div>

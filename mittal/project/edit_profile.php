@@ -19,14 +19,13 @@ $data = mysqli_fetch_assoc($result);
 // die;
 ?>
 
-<div class="col-md-9">
-			<h5 class="my-bg p-2">My Profile</h5>
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-             
-					<div class="card">
-						<div class="card-header">Edit Your Profile</div>
-						<div class="card-body">
+<div class="col-md-8 offset-md-2">
+      <h5 class="my-bg p-2 text-center">Edit Your Profile</h5>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="card bg-dark text-light">
+            <div class="card-header text-center"><h4>View Your Profile</h4></div>
+            <div class="card-body">
               <form action="update_profile.php" method="post">
            					<div class="form-group">
            						<label>Full Name</label>
@@ -63,8 +62,8 @@ $data = mysqli_fetch_assoc($result);
                     </div>
            				</div>
 
-						<div class="card-footer">
-							<button type="submit" class="btn btn-dark">Update</button>
+						<div class="card-footer text-center">
+							<button type="submit" class="btn btn-info">Update</button>
                 
 						</div>
 					</div>
