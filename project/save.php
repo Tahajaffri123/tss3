@@ -6,9 +6,10 @@
 include("db.php");
 // create database connection
 
+
 $a = $_POST['f_name'];
 $b = $_POST['username'];
-$c = sha1($_POST['pass']);
+	$c = sha1($_POST['pass']);
 $d = $_POST['contact'];
 $e = $_POST['gender'];
 $f = $_POST['add'];
@@ -19,7 +20,7 @@ $query="INSERT INTO user (full_name, username, password, city, address, contact,
 // make query
 
 
-mysqli_query($con, $query);
+				mysqli_query($con, $query);
 // fire the query
 
 
