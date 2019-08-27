@@ -18,7 +18,7 @@ include("header.php");
 
  if(isset($_GET['q']))
  {
- 	$q = $_GET['$q'];
+ 	$q = $_GET['q'];
  	$q_upper = strtoupper($q);
  	$q_lower = strtolower($q);
 
@@ -27,7 +27,7 @@ include("header.php");
 
 
  
-$result= mysqli_query($con,$que);
+$result = mysqli_query($con,$que);
 ?>
 <div class="container content">
 		<div class="row">

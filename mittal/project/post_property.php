@@ -37,10 +37,10 @@ include("header.php");
                            <label>Type</label>
                           <select class="form-control" name="type">
                                           <option>Select</option>
-                                          <option>Flat</option>
-                                          <option>Row-House</option>
-                                          <option>Banglow</option>
-                                          <option>Plot</option>
+                                          <option>flat</option>
+                                          <option>row-house</option>
+                                          <option>banglow</option>
+                                          <option>plot</option>
                                 </select>
                   </div>      
                          <div class="form-group">            
