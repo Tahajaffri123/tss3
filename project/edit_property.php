@@ -47,7 +47,7 @@ $data = mysqli_fetch_assoc($result);
 					</div>			
 					<div class="form-group">		
 						<label>Type</label>
-						<select class="form-control" name="type">
+						<select class="form-control"name="type">
 							<option>Select</option>
 							<option <?php if($data['type']=="Flat") echo "selected='selected'"; ?>>Flat</option>
 							<option <?php if($data['type']=="Row-House") echo "selected='selected'"; ?>>Row-House</option>
@@ -58,7 +58,7 @@ $data = mysqli_fetch_assoc($result);
 					<div class="form-group">		
 						<label>Price</label>
 						<div class="input-group">
-							<input type="text" name="price" value="<?php echo $data['price']; ?>" class="form-control"
+							<input type="text"name="price" value="<?php echo $data['price']; ?>" class="form-control"
 							>
 							<div class="input-group-append">
 								<span class="input-group-text">&#8377;</span>
@@ -68,7 +68,7 @@ $data = mysqli_fetch_assoc($result);
 					<div class="form-group">		
 						<label>Area</label>
 						<div class="input-group">
-							<input type="text" value="<?php echo $data['area'] ?>"  name="area" class="form-control">
+							<input type="text" value="<?php echo $data['area'] ?>" name="area" class="form-control">
 							<div class="input-group-append">
 								<span class="input-group-text">squar ft</span>
 							</div>
@@ -76,7 +76,7 @@ $data = mysqli_fetch_assoc($result);
 					</div>	
 					<div class="form-group">		
 						<label>Location</label>
-						<select class="form-control" name="location">
+						<select class="form-control"name="location">
 							<option>Select</option>
 							<option <?php if($data['location']=="Bangali Square") echo "selected='selected'"; ?>>Bangali Square</option>
 							<option <?php if($data['location']=="Vijay Nagar") echo "selected='selected'"; ?>>Vijay Nagar</option>
@@ -101,7 +101,7 @@ $data = mysqli_fetch_assoc($result);
 					</div>
 					<div class="form-group">			
 						<label>Details</label>
-						<textarea name="detail" class="form-control"><?php echo $data['detail'] ?></textarea>
+						<textarea name="details" class="form-control"><?php echo $data['detail'] ?></textarea>
 					</div>
 					<input type="submit" value="Edit Post" class="btn btn-primary">
 
