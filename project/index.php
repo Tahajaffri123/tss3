@@ -18,6 +18,18 @@ if(isset($_GET['type']))
 	}
 }
 
+if(isset($_GET['q']))
+{
+	$q = $_GET['q']; // bangli
+
+	$q_upper=strtoupper($q); // BANGALI
+	$q_lower=strtolower($q); // bangali
+
+	$que = "SELECT * FROM property WHERE location LIKE '%$q_upper%' OR location LIKE'%$q_lower%' OR address LIKE '%$q_upper%' OR address LIKE '%$q_lower%' OR title LIKE '%$q_lower%' OR title LIKE '%$q_upper%'";
+
+}
+
+
 
 
 
@@ -42,7 +54,7 @@ $result = mysqli_query($con, $que);
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-5">
-							<img src="property_img/<?php echo $data['image'] ?>" height="150" class="img-thumbnail">
+							<img src="property_img/<?php echo $data['image'] ?>" height="145" class="img-thumbnail">
 						</div>
 						<div class="col-md-7">
 							<h4><?php echo $data['title']; ?></h4>
@@ -56,7 +68,7 @@ $result = mysqli_query($con, $que);
 					<button class="btn btn-dark btn-sm d-block float-right">Detail</button>
 				</div>
 		</div>
-
+		
 
 		<?php
 		}

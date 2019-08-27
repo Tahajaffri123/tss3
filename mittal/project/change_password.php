@@ -1,5 +1,5 @@
- <?php
- include("db.php");
+<?php
+ include("dbinfo.php");
 include('header.php');
 ?>
 		<div class="col-md-9">

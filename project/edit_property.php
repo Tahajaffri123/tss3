@@ -103,8 +103,7 @@ $data = mysqli_fetch_assoc($result);
 						<label>Details</label>
 						<textarea name="details" class="form-control"><?php echo $data['detail'] ?></textarea>
 					</div>
-					<input type="submit" value="Edit Post" class="btn btn-primary">
-
+					<input type="submit" value="Edit Post" class="btn btn-secondary">
 				</form>
 				<br />
 				<br />

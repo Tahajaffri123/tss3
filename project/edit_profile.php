@@ -1,7 +1,7 @@
 <?php
 include("db.php");
 // Backdoor Protaction Code
-if(! isset($_SESSION['is_user_logged_in']))
+if(! isset($_SESSION['is_user_is_logged_in']))
 {
 	header("location:login.php");
 }
@@ -57,10 +57,9 @@ $data = mysqli_fetch_assoc($result);
 									<option <?php if($data['city']=='Bhopal') echo "selected='selected'" ?>>Bhopal</option>
 									<option <?php if($data['city']=='Delhi') echo "selected='selected'" ?>>Delhi</option>
 									<option <?php if($data['city']=='Pune') echo "selected='selected'" ?>>Pune</option>
-								</select>
+							</select>
 								
 							</div>
-
 						</div>
 						<div class="card-footer">
 							<button type="submit" class="btn btn-dark">Edit</button>

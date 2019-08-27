@@ -11,7 +11,7 @@ $result = mysqli_query($con,$que);
 if(mysqli_num_rows($result)==1)
 {
 	$data=mysqli_fetch_assoc($result);
-	if($data['password']==$p)
+	if($data['password']==sha1($p))
 	{
 		$_SESSION['name']= $data['full_name'];
 		$_SESSION['id'] = $data['id'];
