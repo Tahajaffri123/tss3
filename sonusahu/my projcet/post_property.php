@@ -11,17 +11,30 @@ include("header.php");
 
 
 ?> 
-<div class="col-md-9">
-	<h5 class="my-bg p-2">
-	Post Your Proparty</h5>
-	<div class="row">
-		<div class="col-md-8 offset-md-2">
-			<form action="save_proparty.php" methed="Post">
+
+			<div class="col-md-9">
+			<h5 class="my-bg p-2">Post Your Proparty</h5>
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+			<form action="save_property.php" enctype="multipart/form-data" method="post" class="ram">
 				<div class="form-group">
 					<label>Title</label>
 					<input type="text" name="title" class="form-control">
 				</div>
 				<div class="form-group">
+					<label>property image</label>
+					<input type="file" name="image" class="form-control">
+					<p class="text-danger">
+							<?php
+							if(isset($_SESSION['msg']))
+							{
+								echo $_SESSION['msg'];
+								unset($_SESSION['msg']);
+							}
+							?>
+						</p>
+					</div>			
+<div class="form-group">
                 <label>Type</label>
                 <select class="form-control" name="type">
                 	<option>Select</option>

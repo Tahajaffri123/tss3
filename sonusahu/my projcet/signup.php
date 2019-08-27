@@ -8,7 +8,7 @@ include('header.php');
 					<form action="save.php" method="post">
 					<div class="card mb-4">
 						<div class="card-header">
-							<h5>Signup, Already Registered <a href="login.html">Click Here</a> </h5>
+							<h5>Signup, Already Registered <a href="login.php">Click Here</a> </h5>
 						</div>
 						<div class="card-body">
 							<div class="form-group">
