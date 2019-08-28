@@ -1,6 +1,16 @@
  <?php
 include('header.php');
 ?>
+<script type="text/javascript">
+	function show1()
+	{
+		document.getElementById("submit-btn").setAttribute("class", "btn btn-success btn-lg");
+	}
+	function show2()
+	{
+		document.getElementById("submit-btn").setAttribute("class", "btn btn-dark");
+	}
+</script>
 		<div class="col-md-9">
 			<h5 class="my-bg p-2">User Register</h5>
 			<div class="row">
@@ -56,7 +66,7 @@ include('header.php');
 
 						</div>
 						<div class="card-footer">
-							<button type="submit" class="btn btn-dark">Sign Up</button>
+							<button id="submit-btn" onfocus="show1()" onblur="show2()" type="submit" class="btn btn-dark">Sign Up</button>
 						</div>
 
 					</div>
