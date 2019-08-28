@@ -3,19 +3,14 @@
 include('header.php');
 ?>
 		<div class="col-md-8 offset-md-2">
-			<h5 class="my-bg p-2 text-center">Change Password</h5>
+			<h4 class="my-bg p-2 text-center">Change Password</h4>
 			<div class="row">
-				<div class="col-md-8 offset-md-2">
+				<div class="col-md-10 offset-md-1">
 					<div class="card bg-dark text-light">
-						<div class="card-header">
-						<div class="card-header text-center"><h4>Change Your Password</h4></div>
-		
-					
-						</div>
+						<form action="update.php" method="post">
+						<div class="card-header text-center"><h5>Change Your Password</h5></div>
 						<div class="card-body">
-							
-							
-							<div class="form-group">
+				            <div class="form-group">
 								<label>Current Password</label>
 								<input type="password" name="c_pass" placeholder="Password" class="form-control">
 							</div>
@@ -37,9 +32,9 @@ include('header.php');
 								?>
 							</p>
 						</div>
-						<div class="card-footer">
+						<div class="card-footer text-center">
 
-							<button type="submit" class="btn btn-dark">Update</button>
+							<button type="submit" class="btn btn-info">Update</button>
 						</div>
 
 					</div>

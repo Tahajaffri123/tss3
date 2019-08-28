@@ -42,8 +42,8 @@ $data = mysqli_fetch_assoc($result);
 			<tr >
 				<td colspan="2" class= "text-center">
 			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">More Detail
-			</button></td></tr>
-			
+			</button>
+			<div id="demo" class="collapse">
 			<?php
 			if(isset($_SESSION["is_user_logged_in"]))
 			{
@@ -57,7 +57,7 @@ $data = mysqli_fetch_assoc($result);
 				<td>detail</td>
 				<td><?php echo $data['detail']; ?></td>
 			</tr>
-	
+	        
 			<?php
 		   }
            else
@@ -68,7 +68,7 @@ $data = mysqli_fetch_assoc($result);
 
            }
 		?>
-	   
+	                  </div>
               </table>
           </div>
       </div>

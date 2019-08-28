@@ -18,15 +18,8 @@ else
 	$all_city_query = "SELECT * FROM cities LIMIT $record_per_page";
 	
 }
-
-
-
-
-
+ 
 $all_city_result = mysqli_query($con, $all_city_query);
-
-
-
 $all_city_count_query = "SELECT * FROM cities";
 $all_city_count_result = mysqli_query($con, $all_city_count_query);
 $all_rows = mysqli_num_rows($all_city_count_result);
