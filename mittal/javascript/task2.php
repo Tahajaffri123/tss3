@@ -28,26 +28,10 @@
 		}
 	</style>
 	<script type="text/javascript">
-		function a()
-		{
-		   document.getElementById("input").value="a";
-		}
-		function b()
-		{
-		   document.getElementById("input").value="b";
-		}
-		function c()
-		{
-		   document.getElementById("input").value="c";
-		}
-		function d()
-		{
-		   document.getElementById("input").value="d";
-		}
-		function e()
-		{
-		   document.getElementById("input").value="e";
-		}
+	    function add(a)
+	    {
+	    	document.getElementById("input").value+=a;
+	    }
 	</script>
 </head>
 <body>
@@ -55,11 +39,11 @@
 <br/>
 <br />
 <div id="div">
-	<a class="ancer" href="#" onclick="a()">A</a>
-	<a class="ancer" href="#" onclick="b()">B</a>
-	<a class="ancer" href="#" onclick="c()">C</a>
-	<a class="ancer" href="#" onclick="d()">D</a>
-	<a class="ancer" href="#" onclick="e()">E</a>
+	<a class="ancer" href="#" onclick="add('a')">A</a>
+	<a class="ancer" href="#" onclick="add('b')">B</a>
+	<a class="ancer" href="#" onclick="add('c')">C</a>
+	<a class="ancer" href="#" onclick="add('d')">D</a>
+	<a class="ancer" href="#" onclick="add('e')">E</a>
 </div>
 </body>
 </html>
