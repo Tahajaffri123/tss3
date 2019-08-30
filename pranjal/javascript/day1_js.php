@@ -3,16 +3,13 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
-		function demo()
-		{
-			alert("msg");
+		function demo(){
+			alert("gyu oiuhj niojkb oikjb ");
 		}
-
 	</script>
 </head>
 <body>
-	<h1>Pranjal Jaiswal</h1>
+	<h2 >The Stapping Stone</h2>
 	<button onclick="demo()">OK</button>
-
 </body>
 </html>

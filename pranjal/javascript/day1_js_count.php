@@ -4,16 +4,16 @@
 	<title></title>
 	<script type="text/javascript">
 		var a = 1;
-		function show()
-		{
-			document.getElementById("msg").innerHTML=a;
+		function show(){
+			// alert();
+		 document.getElementById("count").innerHTML=a;
 			a++;
+
 		}
 	</script>
 </head>
-<body id="body">
+<body>
 <button onclick="show()">OK</button>
-<br >
-<h1>Counter : <span id="msg">0</span></h1>
+<h1>Count : <span id="count">0</span></h1>
 </body>
 </html>
