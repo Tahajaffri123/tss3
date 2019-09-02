@@ -2,6 +2,7 @@
 $con = mysqli_connect("localhost","root","password","mittal");
 
 $record_per_page = 100;
+
 if(isset($_GET['pageno']))
 {
 	$a = $_GET['pageno'];

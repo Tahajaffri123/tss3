@@ -51,8 +51,8 @@ $total_pages = ceil($all_rows/$record_per_page);
 		<a href="pagination.php?pageno=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a>
 	</li>
 	<?php
-}
-?>
+      }
+     ?>
 		<li class="page-item<?php if($a==$total_pages) echo "disabled"; ?>">
 		<a href="pagination.php?pageno=<?php echo $a+1; ?>" class="page-link">Next</a>
 	</li>
@@ -72,10 +72,10 @@ $total_pages = ceil($all_rows/$record_per_page);
 		<td><?php echo $all_city_data['city_name']; ?></td>
 		<td><?php echo $all_city_data['city_state'] ?></td>
 		<?php
-        $n++
+        $n++;
           }
         ?>
-
+</tr>
 </table>
 </body>
 </html>
