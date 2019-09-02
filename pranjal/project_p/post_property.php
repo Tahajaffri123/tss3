@@ -1,0 +1,116 @@
+<?php
+include("db.php");
+// Backdoor Protaction Code
+if(! isset($_SESSION['is_user_logged_in']))
+{
+	header("location:login.php");
+}
+
+include("header.php");
+// print_r($_SESSION);
+?>
+		
+				<div class="col-md-8 offset-md-2">
+					<h3 class="my-bg p-3 text-center">Post Property</h3>
+					<div class="row">
+
+							
+						<div class="col-md-8 offset-md-2" >
+						<form action="save_property.php" method="post" enctype="multipart/form-data">
+							<div class="card bg-dark text-light">
+								<div class="card-header">
+							</div>
+
+							<div class="card-body">
+								<div class="form-group">
+									<label><b>Title</b></label>
+									<input type="text" name="title" class="form-control">
+								</div>
+								<div class="form-group">
+								<label>Property Image</label>
+								<input  type="file" name="image" class="form-control">
+								<p class="text-danger">
+									<?php
+										if(isset($_SESSION['msg']))
+										{
+											echo $_SESSION['msg'];
+											unset($_SESSION['msg']);
+										}
+									?>
+								</p>
+							</div>
+								<div class="form-group">		
+						<label>Type</label>
+						<select class="form-control" name="type">
+							<option>Select</option>
+							<option>Flat</option>
+							<option>Row-House</option>
+							<option>Banglow</option>
+							<option>Plot</option>
+						</select>
+					</div>
+							<div class="form-group">		
+						<label><b>Price</b></label>
+						<div class="input-group">
+							<input type="text" name="price" class="form-control"
+							>
+							<div class="input-group-append">
+								<span class="input-group-text">&#8377;</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">		
+						<label>Area</label>
+						<div class="input-group">
+							<input type="text" name="area" class="form-control"
+							>
+							<div class="input-group-append">
+								<span class="input-group-text">squar ft</span>
+							</div>
+						</div>
+					</div>	
+					<div class="form-group">		
+						<label>Location</label>
+						<select class="form-control" name="location">
+							<option>Select</option>
+							<option>Bangali Square</option>
+							<option>Vijay Nagar</option>
+							<option>M.G.Road</option>
+							<option>Palaysia</option>
+							<option>Patnipura</option>
+							<option>Annpurna</option>
+						</select>
+					</div>
+					<div class="form-group">		
+						<label>Perpose</label>
+						<select name="perpose" class="form-control">
+							<option>Select</option>
+							<option>For Rent</option>
+							<option>For Sell</option>
+							
+						</select>
+					</div>
+					<div class="form-group">			
+						<label>Complete Address</label>
+						<textarea name="address" class="form-control"></textarea>
+					</div>
+					<div class="form-group">			
+						<label>Details</label>
+						<textarea name="detail" class="form-control"></textarea>
+					</div>
+					<div class="text-center">
+					<input type="submit" value="Post" class="btn btn-primary ">
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+
+<?php
+include("footer.php");
+?>
