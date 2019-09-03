@@ -15,7 +15,7 @@ $data = mysqli_fetch_assoc($result);
 <div class="col-md-8 offset-md-2">
 			<h5 class="my-bg p-2 text-center">My Profile</h5>
 			<div class="row">
-				<div class="col-md-8 offset-md-2">
+				<div class="col-md-10 offset-md-1">
 					<div class="card bg-dark text-light">
 						<div class="card-header text-center">View Your Profile</div>
 						<div class="card-body">
@@ -53,7 +53,7 @@ $data = mysqli_fetch_assoc($result);
 							</tr>
 						</table>
 					</div>
-					<div class="card-footer">
+					<div class="card-footer text-center">
 						<a href="edit_profile.php" class="btn btn-info">Edit</a>
 						<a href="change_password.php" class="btn btn-info">Change Password</a>
 					</div>

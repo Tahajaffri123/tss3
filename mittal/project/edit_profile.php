@@ -19,14 +19,13 @@ $data = mysqli_fetch_assoc($result);
 // die;
 ?>
 
-<div class="col-md-9">
-			<h5 class="my-bg p-2">My Profile</h5>
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-             
-					<div class="card">
-						<div class="card-header">Edit Your Profile</div>
-						<div class="card-body">
+<div class="col-md-8 offset-md-2">
+      <h4 class="my-bg p-2 text-center">Edit Your Profile</h4>
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="card bg-dark text-light">
+            <div class="card-header text-center"><h5>Edit Your Profile</h5></div>
+            <div class="card-body">
               <form action="update_profile.php" method="post">
            					<div class="form-group">
            						<label>Full Name</label>
@@ -58,13 +57,12 @@ $data = mysqli_fetch_assoc($result);
                          </div>
            					<div class="form-group">
            						<label>Gender</label><br />
-                      <input  type="radio" <?php if($data['gender']=="male") echo "checked = 'checked'"; ?>  name="gender" value="male">Male
-                      <input  type="radio" <?php if($data['gender']=="female") echo "checked = 'checked'"; ?>  name="gender" value="female">Female
+                      <input  type="radio" <?php if($data['gender']=="male") echo "checked = 'checked'"; ?>  name="gender" value="male" />Male
+                      <input  type="radio" <?php if($data['gender']=="female") echo "checked = 'checked'"; ?>  name="gender" value="female" />Female
                     </div>
            				</div>
-
-						<div class="card-footer">
-							<button type="submit" class="btn btn-dark">Update</button>
+						<div class="card-footer text-center">
+							<button type="submit" class="btn btn-info">Update</button>
                 
 						</div>
 					</div>

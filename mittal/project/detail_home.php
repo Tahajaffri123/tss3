@@ -31,18 +31,51 @@ $data = mysqli_fetch_assoc($result);
 							<td><?php echo $data['area']; ?></td>
 						</tr>
 						<tr>
+							<td>location</td>
+							<td><?php echo $data['location']; ?></td>
+						</tr>
+						<tr>
 							<td>Perpose</td>
 							<td><?php echo $data['perpose']; ?></td>
 						</tr>
-						<tr >
-							<td colspan="2" class= text-center><button class="btn btn-info">More Detail
-							</button>
-						</tr>
+					
+			<tr >
+				<td colspan="2" class= "text-center">
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">More Detail
+			</button>
+			<div id="demo" class="collapse">
+			<?php
+			if(isset($_SESSION["is_user_logged_in"]))
+			{
+			?>
+			
+            <tr id="demo" class="collapse">
+				<td>address</td>
+				<td><?php echo $data['address']; ?></td>
+			</tr>
+			<tr id="demo" class="collapse">
+				<td>detail</td>
+				<td><?php echo $data['detail']; ?></td>
+			</tr>
+	        
+			<?php
+		   }
+           else
+           {
+           	 echo $_SESSION['msg'] = "Please Go And Register Your Account";?> <a href="signup.php" class="text-danger">Register</a>
+           	 <?php
+           	 unset($_SESSION['msg']);
+
+           }
+		?>
+	                  </div>
               </table>
           </div>
       </div>
   </div>
-  
+       
+
+
 <?php
 include("footer.php");
 ?>

@@ -8,13 +8,19 @@ if(! isset($_SESSION['is_user_logged_in']))
 include("header.php");
 ?>
 
+
+
+<div class="row">
+
+<div class="col-md-8 offset-md-2">
+      <h4 class="my-bg p-2 text-center">Post-Your-Property</h4>
       <div class="row">
-                              
-                        <div class="col-md-7 offset-md-3">
+        <div class="col-md-10 offset-md-1">
+          <div class="card bg-dark text-light">                          
                         <form action="save_property.php" method="post" enctype="multipart/form-data">
                             <div class="card bg-dark text-light">
                                     <div class="card-header">
-                                          <h3 class="text-center">Post-Your-Property</h3>
+                                          <h5 class="text-center">Post-Your-Property</h5>
                                     </div>
              <div class="card-body">
                   <div class="form-group">            
@@ -37,10 +43,10 @@ include("header.php");
                            <label>Type</label>
                           <select class="form-control" name="type">
                                           <option>Select</option>
-                                          <option>Flat</option>
-                                          <option>Row-House</option>
-                                          <option>Banglow</option>
-                                          <option>Plot</option>
+                                          <option>flat</option>
+                                          <option>row-house</option>
+                                          <option>banglow</option>
+                                          <option>plot</option>
                                 </select>
                   </div>      
                          <div class="form-group">            
@@ -94,16 +100,17 @@ include("header.php");
                               </div>
                         </div>
                         <div class="card-footer text-center">
-                          <button class="btn btn-primary center-block">Post</button>
+                          <button class="btn btn-info center-block">Post</button>
                         </div>
                            </div>
                         </form>
-                        <br />
-                        <br />
-                        <br />
                         </div>
 
-                  </div>
+                    </div>
+                </div>
+             </div>
+          </div>
+         </div> 
 
       <?php
 	include("footer.php");

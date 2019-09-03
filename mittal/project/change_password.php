@@ -2,19 +2,15 @@
  include("dbinfo.php");
 include('header.php');
 ?>
-		<div class="col-md-9">
-			<h5 class="my-bg p-2">Update Password</h5>
+		<div class="col-md-8 offset-md-2">
+			<h4 class="my-bg p-2 text-center">Change Password</h4>
 			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<form action="update.php" method="post">
-					<div class="card mb-4">
-						<div class="card-header">
-							<h3>Change Your Password</h3>
-						</div>
+				<div class="col-md-10 offset-md-1">
+					<div class="card bg-dark text-light">
+						<form action="update.php" method="post">
+						<div class="card-header text-center"><h5>Change Your Password</h5></div>
 						<div class="card-body">
-							
-							
-							<div class="form-group">
+				            <div class="form-group">
 								<label>Current Password</label>
 								<input type="password" name="c_pass" placeholder="Password" class="form-control">
 							</div>
@@ -36,9 +32,9 @@ include('header.php');
 								?>
 							</p>
 						</div>
-						<div class="card-footer">
+						<div class="card-footer text-center">
 
-							<button type="submit" class="btn btn-dark">Update</button>
+							<button type="submit" class="btn btn-info">Update</button>
 						</div>
 
 					</div>
