@@ -3,12 +3,12 @@ $(document).ready(function(){
 		var a = $("#f_name").val();
        if(a=="")
        {
-       	$("f_name_msg").html("Insert Your Name");
+       	$("#f_name_msg").html("Insert Your Name");
        	return false;
        }
        else
        {
-       	$("f_name_msg").html("""");
+       	$("#f_name_msg").html("");
        }
        var b = $("#username").val();
        if(b="")
