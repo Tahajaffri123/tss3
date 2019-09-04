@@ -4,11 +4,24 @@
 	<title></title>
 	<meta name="viewport" content="width=device-width, 
 	initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $('.slider').bxSlider({
+	    	
+	    	auto : true,
+	    	pause : 1000
+	    });
+	  });
+	</script>
 </head>
 <body>
 <div class="container-fluid my-bg font-weight-bold">
@@ -76,22 +89,35 @@
 	?>
 	</div>
 </nav>
-<div class="jumbotron jumbotron-fluid slider">
-	
-		<div class="col-md-6 offset-md-3">
-			<form action="index.php" method="get">
-				
-			<div class="form-group mt-4 pt-3">
-				<div class="input-group">
-					<input type="text" name="q" placeholder="Search Property" class="form-control">
-					<div class="input-group-append">
-							<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
-					</div>
+<!-- <div class="jumbotron jumbotron-fluid slider"> -->
+	<div class="col-md-6 offset-md-3" style="position: absolute; z-index: 99999">
+		<form action="index.php" method="get">
+			
+		<div class="form-group mt-4 pt-3">
+			<div class="input-group">
+				<input type="text" name="q" placeholder="Search Property" class="form-control">
+				<div class="input-group-append">
+						<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</div>
 			</div>
-			</form>
 		</div>
+		</form>
 	</div>
+	<div class="my-slider slider">
+	  <div>
+	  	<img src="image/slider-bg.jpg" height="260" width="100%"/>
+	  </div>
+	  <div>
+	  	<img src="image/2.jpeg" height="260" width="100%"/>
+	  </div>
+	  <div>
+	  	<img src="image/3.jpeg" height="260" width="100%" />
+	  </div>
+	</div>
+
+
+		
+	<!-- </div> -->
 <div class="container content">
 	<div class="bg-info">
 	<div class="row">
