@@ -7,12 +7,12 @@
 		$(document).ready(function(){
 			$("a").click(function(){
 
-				// $("p").css({
-				// 		"background-color":"red", 
-				// 		"font-size":"20px", 
-				// 		"color":"white"
-				// 	});
-				$("p").animate({"margin-left":"400px", "margin-top":"400px"}, 1000);
+				$("p").css({
+						"background-color":"red", 
+						"font-size":"20px", 
+						"color":"white",
+					});
+				// $("p").animate({"margin-left":"400px", "margin-top":"400px"}, 1000);
 				// $("p").animate({"margin-top":"400px"}, 1000);
 				// $("p").animate({"margin-left":"0px"}, 1000);
 				// $("p").animate({"margin-top":"0px"}, 1000);

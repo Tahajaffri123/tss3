@@ -7,7 +7,6 @@ $(document).ready(function(){
 		var e = $("#contact").val();
 		var f = $("#add").val();
 		var g = $("#city").val();
-
 		var h = $("#male").is(":checked");
 		var i = $("#female").is(":checked");
 

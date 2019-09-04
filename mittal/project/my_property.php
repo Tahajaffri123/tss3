@@ -39,8 +39,9 @@ $result = mysqli_query($con, $que);
 								<td><a href="delete.php?id=<?php echo $data['id']; ?>" class="btn  btn-danger btn-sm">Delete</a></td> 
 							</tr>
 					    <?php
-						}
+						
 						$n++;
+				       	}
 						?>
               </table>
           </div>

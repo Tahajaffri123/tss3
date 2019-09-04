@@ -16,7 +16,7 @@ $data = mysqli_fetch_assoc($result);
 // print_r($_SESSION);
 ?>
 		<div class="col-md-9">
-			<h5 class="my-bg p-2">My Property</h5>
+			<h5 class="my-bg p-2">Property Detail</h5>
 			<div class="row">
 				<div class="col-md-12">
 					<table class="table table-dark table-bordered table-hover">
