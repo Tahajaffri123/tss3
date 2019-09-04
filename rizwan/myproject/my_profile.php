@@ -31,7 +31,7 @@ $data = mysqli_fetch_assoc($result);
 								<td><?php echo $data['fullname'];?></td>
 							</tr>
 							<tr class="my-details">
-								<td>Title</td>
+								<td>Email</td>
 								<td><?php echo $data['email'];?></td>
 							</tr>
 							<tr class="my-details">
@@ -54,7 +54,7 @@ $data = mysqli_fetch_assoc($result);
 							<td colspan="2"><a href="edit_profile.php" class="btn btn-sm btn-info">Edit Profile</a></td>
 							</tr>
 							<tr class="my-details">
-							<td colspan="2"><a href="edit_profile.php" class="btn btn-sm btn-info">Change Password</a></td>
+							<td colspan="2"><a href="change_password.php" class="btn btn-sm btn-info">Change Password</a></td>
 							</tr>
 					</table>
 				</div>
