@@ -12,7 +12,17 @@
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-	<script type="text/javascript" src="css/font-awesome.css"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	    $('.slider').bxSlider({
+	    	
+	    	auto : true,
+	    	pause : 1000
+	    });
+	  });
+	</script>
+	
 </head>
 <body>
 	<div class="container-fluid my-bg font-weight-bold"> 
@@ -73,8 +83,8 @@
 ?>
 	</div>
 </nav>
-	<div class=" jumbotron jumbotron-fluid slider">
-		<div class="col-md-6 offset-md-3">
+	<!-- <div class=" jumbotron jumbotron-fluid slider"> -->
+		<div class="col-md-6 offset-md-3" style="position: absolute; z-index: 999999">
 			<form action="index.php" method="get">
 			<div class="form-group mt-4 pt-4">
 				<div class="input-group">
@@ -86,4 +96,14 @@
 			</div>
 		</form>
 		</div>
-	</div>
+    <div class="my-slider slider">
+    	<div>
+    		<img src="image/1.jpeg" height="250" width="100%" />
+    	</div>
+    	<div>
+    		<img src="image/3.jpg" height="250" width="100%" />
+    	</div>
+    	<div>
+    		<img src="image/4.jpg" height="250" width="100%" />
+    	</div>
+    </div>
