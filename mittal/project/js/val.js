@@ -8,9 +8,14 @@ $(document).ready(function(){
               var check=true;
        if(a=="")
        {
+<<<<<<< HEAD
               check=false;
        	$("#f_name_msg").html("Insert Your Name");
        	
+=======
+       	$("#f_name_msg").html("Insert Your Name");
+       	return false;
+>>>>>>> 9e69941df8ed803e871cacc45b6000d77e41d8a6
        }
        else
        {

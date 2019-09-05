@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+<div style="width: 300px; margin: 10px auto;">
+	<div class="flipper" data-reverse="true" data-datetime="2019-12-01 00:00:00" data-template="HH|ii|ss" data-labels="Hours|Minutes|Seconds" id="myFlipper"></div>
+</div>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="jquery.flipper-responsive.js"></script>
+<script>
+  jQuery(function ($) {
+  $('#myFlipper').flipper('init');
+  $('#modalFlipper').flipper('init');
+});
+</script>
+
+</body>
+</html>

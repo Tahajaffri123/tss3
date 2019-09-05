@@ -18,9 +18,9 @@ include("header.php");
 	<div class="row back-new" >
 		<div class="col-md-8 offset-md-2 new-content">
 			<div class="col-md-9">
-			<h5 class="user-back p-2 text-center">Post Your Property</h5>
 			<div class="row">
 				<div class="col-md-12 offset-md-2">
+				<h5 class="user-back p-2 text-center">Post Your Property</h5>
 				<form action="save_property.php" method="post" enctype="multipart/form-data">
 					<div class="form-group">		
 						<label>Title</label>

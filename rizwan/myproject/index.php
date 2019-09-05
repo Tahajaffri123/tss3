@@ -4,6 +4,20 @@
 include("db.php");
 include('header.php');
 $que = "SELECT * FROM property ORDER BY time desc";
+if(isset($_GET['type']))
+{
+	$a = $_GET['type'];
+	if($a=="rent")
+	{
+		$que = "SELECT * FROM property WHERE perpose = 'For Rent' ORDER BY time desc";
+
+	}
+	if($a=="buy")
+	{
+
+		$que = "SELECT * FROM property WHERE perpose = 'For Sell' ORDER BY time desc";
+	}
+}
 $result = mysqli_query($con, $que);
 // print_r($_SESSION);
 // die;
@@ -29,17 +43,17 @@ $result = mysqli_query($con, $que);
 		<div class="col-md-3">
 			<ul class="list-group">
 				<li class="list-group-item">
-					<a href="#" class="list-group-link">For Rent</a>
+					<a href="index.php?type=rent" class="list-group-link">For Rent</a>
 				</li>
 				<li class="list-group-item">
-					<a href="#" class="list-group-link">For Buy</a>
+					<a href="index.php?type=buy" class="list-group-link">For Buy</a>
 				</li>
 
 			</ul>
 		</div>
 		<div class="col-md-9">
 			<h5 class="my-bg p-2">Latest Property</h5>
-	<?php
+		<?php
 		while($data=mysqli_fetch_assoc($result))
 		{
 		?>
@@ -55,11 +69,13 @@ $result = mysqli_query($con, $que);
 							<h4> <?echo $data=['title']; ?></h4>
 							<p><strong>Price : </strong><?php echo $data['price'];?></p>
 							<p><strong>Location : </strong><?php echo $data['location'];?></p>
+							<p>Type : <b class="badge badge-pill badge-primary"><?php echo $data['perpose']; ?></b>
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="card-footer">
-					<button class="btn btn-dark btn-sm d-block float-right">Detail</button>
+					<a href="property_details.php?details=<?php echo $data['id'];  ?>" class="btn btn-dark btn-sm d-block float-right">Detail</a>
 				</div>
 			</div>
 

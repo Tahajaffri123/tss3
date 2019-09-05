@@ -20,7 +20,8 @@
 	<script type="text/javascript">
 		function change(a)
 		{
-			document.getElementById("img").setAttribute("src", a);
+			alert(a)
+			// document.getElementById("img").setAttribute("src", a);
 		}
 	</script>
 </head>
