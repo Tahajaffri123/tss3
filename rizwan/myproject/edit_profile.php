@@ -14,14 +14,13 @@ $data = mysqli_fetch_assoc($result);
 // print_r($data);
 
 ?>
-		<div class="col-md-9">
-			<h5 class="my-bg p-2">Edit Profile</h5>
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
+<div class="container-fluid back-new">
+<div class="container content">
+	<div class="row">
+		<div class="col-md-8 offset-md-2 new-content">
+			<h3 class="user-back p-2 text-center">Edit Profile</h3>
 					<form action="update_profile.php" method="post">
-						
-					
-					<div class="card">
+					<div class="card mb-4">
 						<div class="card-header">Edit Your Profile</div>
 						<div class="card-body">
 							<div class="form-group">

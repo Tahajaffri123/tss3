@@ -1,5 +1,5 @@
 <?php
-print_r($_POST);
+
 
 $con = mysqli_connect("localhost", "root", "", "riz");
 

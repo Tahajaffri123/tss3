@@ -17,7 +17,7 @@
 	</div>
 </div>
 <nav class="sticky-top navbar bg-primary navbar-dark navbar-expand-sm">
-	<a href="index.php" class="navbar-brand">Makaan.com</a>
+	<a href="index.php" class="navbar-brand">MyHome.com</a>
 
 	<button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
 		<span class="navbar-toggler-icon"></span>
