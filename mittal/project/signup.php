@@ -6,7 +6,7 @@ include("header.php");
 		<div class="row pt-0 mb-5">
 			<div class="col-md-10 offset-md-1 pt-0 mt-0">
            	<h2 class="my-bg p-2 text-center">User Signup</h2>
-            <form action="" method="post">
+            <form action="save.php" method="post">
            	<div class="card bg-dark text-light">
            				<div class="card-header">
            					<h5>Signup, Already Registered<a href="login.html">  Clikehere</a></h5>
@@ -24,7 +24,7 @@ include("header.php");
            					</div>
            					<div class="form-group">
            						<label>Password</label>
-           						<input type="Password" class="form-control" name="pass"placeholder="Enter Password" id="Pass">
+           						<input type="Password" class="form-control" name="pass"placeholder="Enter Password" id="pass">
                         <p id="pass_msg" class="text-danger error-msg"></p>
            					</div>
            					<div class="form-group">
@@ -57,14 +57,14 @@ include("header.php");
                          </div>
            					<div class="form-group">
            						<label>Gender</label><br />
-           						<input type="radio" name="gender" value="male" id="mail">Mail
-           						<input type="radio" name="gender" value="femail" id="femail">Femail</div>
+           						<input type="radio" name="gender" value="male" id="male">Male
+           						<input type="radio" name="gender" value="female" id="female">Female</div>
                         <p id="gender_msg" class="text-danger error-msg"></p>
            				</div>
 
            				<div class="card-footer text-center">
                         
-                         <button class="btn btn-primary" id="submit_btn">Signup</button>
+                         <button class="btn btn-primary" type="submit" id="submit-btn">Signup</button>
            				</div>
            			</div>
               </form>
