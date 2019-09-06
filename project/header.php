@@ -117,9 +117,9 @@
 
 
 		
-	<!-- </div> -->
+	</div>
 <div class="container content">
-	<div class="bg-info">
+	
 	<div class="row">
 		<div class="col-md-3">
 			<ul class="list-group">
@@ -131,4 +131,4 @@
 				</li>
               </ul>
           </div>
-		</div>
+		<!-- </div> -->

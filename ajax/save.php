@@ -1,12 +1,16 @@
 <?php
 $con = mysqli_connect("localhost", "root", "password", "tss3");
 
-$a = $_POST['name'];
-$b = $_POST['age'];
-$c = $_POST['marks'];
+if(isset($_POST['name']))
+{
+	$a = $_POST['name'];
+	$b = $_POST['age'];
+	$c = $_POST['marks'];
 
-$query = "INSERT INTO student (name, age, marks) VALUES ('$a', '$b', '$c')";
-mysqli_query($con, $query);
+	$query = "INSERT INTO student (name, age, marks) VALUES ('$a', '$b', '$c')";
+	mysqli_query($con, $query);
+	
+}
 
 
 $query = "SELECT * FROM student ORDER BY id DESC";
