@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1"> 
-
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -18,7 +18,7 @@
 	    $('.slider').bxSlider({
 	    	
 	    	auto : true,
-	    	pause : 1000
+	    	pause : 2000
 	    });
 	  });
 	</script>
@@ -27,13 +27,11 @@
 <body>
 	<div class="container-fluid my-bg font-weight-bold"> 
 			<div class="row">
-					<div class="col-md-1 offset-1 p-0">
-	                <img src="property_img/logo.png" class="img-thumbnail" height="100px" width="100px">
-			       </div>
-				<div class="col-md-5 offset-md-2">
-					<p class="m-0 pt-4 font-weight-bold">Best Place for Buy and Rent Property in Indore</p>
+					
+				<div class="col-md-6 offset-md-4">
+					<p class="m-0 p-2 font-weight-bold">Best Place for Buy and Rent Property in Indore</p>
 				</div>
-			</div> 
+			</div>
 	</div>
 <nav class= "navbar bg-danger navbar-expand-sm navbar-dark sticky-top">
 	<a href="index.php" class="navbar-brand">Makaan.com</a>
@@ -98,7 +96,10 @@
 		</div>
     <div class="my-slider slider">
     	<div>
-    		<img src="image/1.jpeg" height="250" width="100%" />
+    		<img src="image/2.jpg" height="250" width="100%" />
+    	</div>
+    	<div>
+    		<img src="image/slider2.jpg" height="250" width="100%" />
     	</div>
     	<div>
     		<img src="image/3.jpg" height="250" width="100%" />

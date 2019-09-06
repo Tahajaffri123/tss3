@@ -30,14 +30,6 @@ if(isset($_GET['q']))
 }
 
 
-
-
-
-
-
-
-
-
 $result = mysqli_query($con, $que);
 ?>
 		<div class="col-md-9">

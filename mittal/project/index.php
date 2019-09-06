@@ -42,7 +42,7 @@ $result = mysqli_query($con,$que);
 				</ul>
 			</div>
 			<div class="col-md-9">
-				<h5 class="my-bg p-2">Latest Property</h5>
+				<h5 class="my-bg p-2 text-center">Latest Property</h5>
 				<?php
 				while ($data  = mysqli_fetch_assoc($result)) 
 				{
