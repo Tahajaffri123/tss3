@@ -10,7 +10,7 @@ $result = mysqli_query($con, $que);
 $data = mysqli_fetch_assoc($result);
  ?>
  <div class="col-md-9 offset-md-2">
-			<h5 class="my-bg p-2 text-center">My Property</h5>
+			<h5 class="my-bg p-2 text-center">Information About Property</h5>
 			<div class="row">
 				<div class="col-md-12">
 					<table class="table table-hover table-dark table-bordered">
