@@ -91,7 +91,7 @@
 </nav>
 <!-- <div class="jumbotron jumbotron-fluid slider"> -->
 	<div class="col-md-6 offset-md-3" style="position: absolute; z-index: 99999">
-		<form action="index.php" method="get">
+	<form action="index.php" method="get">
 			
 		<div class="form-group mt-4 pt-3">
 			<div class="input-group">
