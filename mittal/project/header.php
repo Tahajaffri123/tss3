@@ -12,6 +12,9 @@
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+<<<<<<< HEAD
+	<link type="text/javascript" src="css/font-awesome.css"></script>
+=======
 	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -23,6 +26,7 @@
 	  });
 	</script>
 	
+>>>>>>> 581b0903c66faf418ac3f85cf6697560ccd85acd
 </head>
 <body>
 	<div class="container-fluid my-bg font-weight-bold"> 
