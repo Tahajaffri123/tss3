@@ -16,8 +16,7 @@
 .content{
 	min-height: 400px;
 }
-/*.img1{*/
-	/*background-image: url("../image/home.PNG");*/
-	/*height: 10px;*/
-	/*width: 300px;*/
-/*
+
+.error_msg{
+	font-size: 14px !important;
+}
