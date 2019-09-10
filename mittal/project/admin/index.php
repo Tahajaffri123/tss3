@@ -18,10 +18,10 @@
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
 			  <div class="row">
-			  	<div class="col-md-8 offset-md-2">
+			  	<div class="col-md-10 offset-md-1">
 			  		
 			  		<form action="admin-auth.php" method="post">
-			  		<div class="card">
+			  		<div class="card" style="margin-top: 100px;">
 			  	       <div class="card-header">
 			  		    <h3 class="text-center">Admin Login</h3>
 			  	      </div>
