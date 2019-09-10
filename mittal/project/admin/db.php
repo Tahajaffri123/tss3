@@ -1,4 +1,4 @@
 <?php
-$con = mysqli_connect("localhost","root","","mittal");
+$con = mysqli_connect("localhost","root","password","mittal");
 Session_start();
 ?>

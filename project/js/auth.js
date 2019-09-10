@@ -5,8 +5,6 @@ $(document).ready(function(){
 	$("#password").focus(function(){
 		$(this).css({"border":"1px solid #ced4da"});
 	});
-
-
 	$("#submit").click(function(){
 		var u = $("#username").val();
 		var p = $("#password").val();
