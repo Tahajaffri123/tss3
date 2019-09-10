@@ -18,13 +18,18 @@ if(isset($_GET['type']))
 		$que = "SELECT * FROM property WHERE perpose = 'For Sell' ORDER BY time desc";
 	}
 }
+
 $result = mysqli_query($con, $que);
+
+$que1 = "SELECT * FROM slider_image";
+$slider= mysqli_query($con, $que1);
+
+
+
 // print_r($_SESSION);
 // die;
-?>
-<div class="jumbotron jumbotron-fluid slider">
-	
-		<div class="col-md-6 offset-md-3">
+?>	
+		<div class="col-md-6 offset-md-3" style="position: absolute; z-index: 999">
 			<div class="form-group pt-3 Search-bar">
 				<div class="input-group">
 					<input type="text" placeholder="Search Property" class="form-control">
@@ -35,8 +40,28 @@ $result = mysqli_query($con, $que);
 
 			</div>
 		</div>
-	
-</div>
+	<div class="my-slider slider ">
+	<div>
+		<?php
+		while($data1=mysqli_fetch_assoc($slider))
+		{
+		?>
+		<img src="../admin/slider_img/<?php echo $data1['name'] ?>" height="300" width="100%">
+		<?php
+		}
+		?>
+
+	</div>
+	  <div>
+	  	<img src="image/20.jpg" height="400" width="100%"/>
+	  </div>
+	   <div>
+	  	<img src="image/2.jpg" height="400" width="100%"/>
+	  </div>
+	  <div>
+	  	<img src="image/5.jpg" height="400" width="100%"/>
+	  </div>
+	</div>
 
 <div class="container content">
 	<div class="row">
