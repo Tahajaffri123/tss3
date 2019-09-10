@@ -1,0 +1,32 @@
+.bg-primary {
+	padding: 0px;
+	background-color: #222222 !important;
+}
+.navbar-light .navbar-brand{
+	color: #fff;
+}
+.navbar-brand:hover{
+	color: #fff !important;
+}
+.navbar-light .navbar-nav .nav-link{
+	color: #fff !important;
+}
+.navbar-nav .dropdown-menu {
+	margin-top: -3px;
+	background-color: #222222;
+	border: none;
+}
+.navbar-nav .nav-link:hover{
+	background-color: #E8554E;
+}
+.dropdown-item {
+	color: #fff;
+}
+.dropdown-item:hover {
+	background-color: #E8554E;
+	color: #fff;
+}
+.modal-header, .modal-footer{
+	color: #fff;
+	background-color: #E8554E;
+}
