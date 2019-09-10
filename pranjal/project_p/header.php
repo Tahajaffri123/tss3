@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>	
 <html>
 <head>
 	<title></title>
@@ -22,11 +22,11 @@
 </head>
 <body>
 	<div class="container-fluid my-bg font-weight-bold">
-		<div class="container ">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-1 offset-0">
+				<div class="col-md-1">
 	</div>
-					<div class="col-md-5 offset-0">
+					<div class="col-md-5">
 						<p class="m-3 p-1">Best Place for Buy and Rent Property in Indore</p> 
 					</div>
 			</div>
@@ -100,10 +100,10 @@
 			<form action="index.php" method="get">
 			<div class="form-group mt-4 pt-3">
 				<div class="input-group">
-					<input type="text" name="q" placeholder="Search Property" class="form-control mt-5">
+					<!-- <input type="text" name="q" placeholder="Search Property" class="form-control mt-5">
 					<div class="input-group-append">
 							<button type="submit"  class="btn btn-sm btn-primary mt-5"><i class="fa fa-search" aria-hidden="true"></i></button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			</form>
