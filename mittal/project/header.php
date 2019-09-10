@@ -95,8 +95,15 @@
 			</div>
 		</form>
 		</div>
-    <div class="my-slider slider">
-    	<div>
+    <div class="my-slider slider">	
+     <?php
+     $que = "SELECT * FROM slider_img";
+     $result = mysqli_query($con,$que);
+     ?>
+     <div>
+     	<img src="../admin/image<?php echo $data['name']; ?>" height="250" width="100%">
+     </div>
+   
     		<img src="image/2.jpg" height="250" width="100%" />
     	</div>
     	<div>
