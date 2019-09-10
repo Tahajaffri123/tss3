@@ -1,8 +1,4 @@
 <?php
-if(! isset($_SESSION['is_admin_logged_in']))
-{
-header("location:index.php");
-}
 include("header.php");
 
 ?>
@@ -22,7 +18,7 @@ include("header.php");
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
 			  <div class="row">
-			  	<div class="col-md-8 offset-md-2">
+			  	<div class="col-md-10 offset-md-1">
 			  		<form action="image-save.php" method="post">
 			  		<div class="card">
 			  	       <div class="card-header">
@@ -48,8 +44,7 @@ include("header.php");
 			</div>
 		</div>
 	</div>
-
-
+<br />
 <?php
 include("footer.php");
 ?>

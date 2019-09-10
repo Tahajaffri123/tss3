@@ -1,10 +1,6 @@
 <?php
 include("db.php");
-print_r($_POST);
- if(! isset($_SESSION['is_admin_logged_in']))
- {
- 	header("location:index.php");
- }
+// print_r($_POST);
  $name = $_FILES['image']['name'];
  $tmp_name = $_FILES['image']['tmp_name'];
  $size = $_FILES['image']['size'];
@@ -21,8 +17,9 @@ print_r($_POST);
  		$a = $_POST['title'];
  		$b = $_POST['name'];
 
- 		$que = "INSERT INTO slider-img(title, name) VALUES('$a', '$b')";
- 		move_uploaded_file($tmp_name, "image/".$new_name);
+ 		echo $que = "INSERT INTO slider_img (title, name) VALUES('$a', '$b')";
+ 		die;
+ 		move_uploaded_file($tmp_name, "property_img/".$new_name);
  		mysqli_query($con,$que);
  		header("location:dashbord.php");
  	}
