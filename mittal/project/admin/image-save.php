@@ -18,7 +18,7 @@ include("db.php");
  		// print_r($_POST);
  		  $que = "INSERT INTO slider_img (title, name) VALUES('$a', '$new_name')";
  		 
- 		move_uploaded_file($tmp_name, "image/".$new_name);
+ 		move_uploaded_file($tmp_name,"slider_img/".$new_name);
  		mysqli_query($con,$que);
  		header("location:dashbord.php");
  	}
