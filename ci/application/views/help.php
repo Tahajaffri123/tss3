@@ -11,6 +11,10 @@
 <a href="<?php echo site_url('home/about') ?>">About</a>
 <a href="<?php echo site_url('home/contact') ?>">Contact</a>
 <a href="<?php echo site_url('home/help') ?>">Help</a>
-<h1>This is Contact Page</h1>
+<h1>This is Help Page</h1>
+
+<h2><?php echo $name; ?></h2>
+<h2><?php echo $city; ?></h2>
+<h2><?php echo $age; ?></h2>
 </body>
 </html>
