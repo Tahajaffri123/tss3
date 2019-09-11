@@ -1,3 +1,8 @@
+<?php
+ $con = mysqli_connect("localhost","root","password","mittal");
+ $query = "SELECT * FROM slider_img";
+ $result1 = mysqli_query($con, $query);
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+   
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
@@ -82,7 +88,7 @@
 ?>
 	</div>
 </nav>
-	<!-- <div class=" jumbotron jumbotron-fluid slider"> -->
+	 <!-- <div class=" jumbotron jumbotron-fluid slider">  -->
 		<div class="col-md-6 offset-md-3" style="position: absolute; z-index: 999999">
 			<form action="index.php" method="get">
 			<div class="form-group mt-4 pt-4">
@@ -95,17 +101,17 @@
 			</div>
 		</form>
 		</div>
+ 
     <div class="my-slider slider">
+    	<?php
+    	while($data = mysqli_fetch_assoc($result1))
+    	{
+    	?>
     	<div>
-    		<img src="image/2.jpg" height="250" width="100%" />
+    		<img src="admin/slider_img/<?php echo $data['name']; ?>" height="250" width="100%" />
     	</div>
-    	<div>
-    		<img src="image/slider2.jpg" height="250" width="100%" />
-    	</div>
-    	<div>
-    		<img src="image/3.jpg" height="250" width="100%" />
-    	</div>
-    	<div>
-    		<img src="image/4.jpg" height="250" width="100%" />
-    	</div>
+    	<?php
+          }
+    	?>
     </div>
+    	

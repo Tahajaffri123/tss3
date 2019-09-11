@@ -20,8 +20,8 @@ $(document).ready(function(){
         }
         if(u !="" && p!="")
         {
-        	$.ajex({
-                   url : "ajax-auth.php",
+        	$.ajax({
+                   url : "auth-ajax.php",
                    type : "post",
                    data : {username : u, pass : p},
                    succsecc : function(responce)
@@ -36,8 +36,17 @@ $(document).ready(function(){
                    		$("#erroe-msg").html("This Password Is Incorrect")
                    		$("#password").focus();
                    	}
+                     if(responce==3)
+                     {
+                       $("#preloader").show();
+                       setTimeout("demo()",3000);
+                     }
                    }
         	});
         }
       });
 	});
+function demo()
+{
+  window.location.href="my_account.php";
+}

@@ -23,7 +23,7 @@ include("header.php");
            					</div>
            				</div>
            				<div class="card-footer text-center">
-                         <button class="btn btn-primary" id="submit">Login</button>
+                         <button class="btn btn-primary" id="submit">Login<span class="spinner-border text-light spinner-border-sm" id="preloader" style="display:none"></span></button>
                          <button class="btn btn-primary">Signup</button>
            				</div>
            			</div>
