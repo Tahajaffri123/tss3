@@ -1,6 +1,6 @@
 <?php
 $con = mysqli_connect("localhost","root","password","mittal");
-$a = $_POST['state_id'];
+ $a = $_POST['stateid'];
 $que = "SELECT * FROM city WHERE state_id = $a";
 $result = mysqli_query($con, $que);
 echo "<option>Select</option>";

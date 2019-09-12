@@ -15,7 +15,7 @@ $con = mysqli_connect("localhost","root","password","mittal");
 		   	  $.ajax({
 		   	  	     url : "state.php",
 		   	  	     type : "post",
-		   	  	     data : {state_id : a},
+		   	  	     data : {stateid : a},
 		   	  	     success : function(responce)
 		   	  	     {
 		   	  	     	 $("#city_id").html(responce);
