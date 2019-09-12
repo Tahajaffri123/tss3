@@ -100,10 +100,10 @@
 			<form action="index.php" method="get">
 			<div class="form-group mt-4 pt-3">
 				<div class="input-group">
-					<!-- <input type="text" name="q" placeholder="Search Property" class="form-control mt-5">
+					<input type="text" name="q" placeholder="Search Property" class="form-control mt-5">
 					<div class="input-group-append">
 							<button type="submit"  class="btn btn-sm btn-primary mt-5"><i class="fa fa-search" aria-hidden="true"></i></button>
-					</div> -->
+					</div>
 				</div>
 			</div>
 			</form>
@@ -117,6 +117,12 @@
 			</div>
 			<div>
 				<img src="image/4.jpg" height="300" width="100%" />
+			</div>
+			<div>
+				<img src="image/5.jpg" height="300" width="100%" />
+			</div>
+			<div>
+				<img src="image/6.jpg" height="300" width="100%" />
 			</div>
 		</div>
 	</div>
