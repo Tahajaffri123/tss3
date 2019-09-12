@@ -18,7 +18,7 @@ $data = mysqli_fetch_assoc($result);
 				<div class="col-md-8 offset-md-2">
 					<div class="card">
 						<div class="card-header">View Your Profile</div>
-						<div class="card-body">
+						<div class="card-body card-1" >
 							<table class="table">
 								<tr>
 									<td>Full Name</td>

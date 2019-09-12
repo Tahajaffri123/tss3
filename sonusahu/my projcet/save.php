@@ -6,7 +6,7 @@ include("db.php");
 
 $a = $_POST['fullname'];
 $b = $_POST['username'];
-$c = $_POST['password'];
+$c = sha1($_POST['password']);
 $d = $_POST['contact'];
 $e = $_POST['gender'];
 $f = $_POST['address'];
