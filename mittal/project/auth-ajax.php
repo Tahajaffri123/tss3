@@ -4,8 +4,8 @@ include("dbinfo.php");
 $u = $_POST['username'];
 $p = $_POST['pass'];
 
-echo $que = "SELECT * FROM register WHERE username='$u'";
-// die;
+ $que = "SELECT * FROM register WHERE username='$u'";
+
 
 $result = mysqli_query($con,$que);
 if(mysqli_num_rows($result)==1)

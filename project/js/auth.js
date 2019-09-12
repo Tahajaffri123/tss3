@@ -20,7 +20,7 @@ $(document).ready(function(){
 		if(u !="" && p !="")
 		{
 			$.ajax({
-				url : "auth_ajax.php",
+				url : "ajax_auth.php",
 				type : "post",
 				data : { username : u, pass : p},
 				success : function(response){

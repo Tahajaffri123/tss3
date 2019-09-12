@@ -24,7 +24,7 @@ $(document).ready(function(){
                    url : "auth-ajax.php",
                    type : "post",
                    data : {username : u, pass : p},
-                   succsecc : function(responce)
+                   success : function(responce)
                    {
                    	if(responce==1)
                    	{

@@ -1,20 +1,29 @@
 <?php
 class Home extends CI_Controller{
-	function homepage()
+	function index()
 	{
-		$this->load->view("homepage");
+		$arr['demo'] = "TSS";
+		$this->load->helper("url");
+		$this->load->view("homepage", $arr);
 	}
 	function about()
 	{
+		$this->load->helper("url");
 		$this->load->view("about");
 	}
 	function contact()
 	{
-		$this->load->view("contact");
+		$this->load->helper("url");
+        $this->load->view("contact");
 	} 
 	function help()
 	{
-		$this->load->view("help");
+		$a = "Rohit";
+		$b = "Indore";
+		$arr = array("name" => $a ,"city" => $b);
+		$arr['age'] = 25;
+		$this->load->helper("url");
+		$this->load->view("help", $arr);
 	}
 }
 ?>
