@@ -8,6 +8,7 @@ $p = $_POST['pass'];
 
 
 $result = mysqli_query($con,$que);
+// echo mysqli_num_rows($result);
 if(mysqli_num_rows($result)==1)
 {
 	$data=mysqli_fetch_assoc($result);
