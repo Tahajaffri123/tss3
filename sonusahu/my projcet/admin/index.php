@@ -7,16 +7,18 @@
 	<title></title>
 	<meta name="viewport" content="width=device-width, 
 	initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-
 </head>
 <body>
 	<div class="container-fluid my-bg font-weight-bold">
-<div class="container-fuit">
+<div class="container">
 	<nav class="sticky-top navbar bg-dark navbar-dark navbar-expand-sm ">
 	<a href="index.php" class="navbar-brand"><i class="fa fa-header" aria-hidden="true"></i>ouse.com</a>
 	<button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
