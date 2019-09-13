@@ -43,6 +43,9 @@
 											?>
 										</p>
 									</div>
+									<div class="card-footer text-center">
+										<button class="btn btn-info">Save</button>
+									</div>
 								</div>
 							</div>
 						</form>

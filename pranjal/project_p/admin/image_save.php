@@ -1,6 +1,7 @@
 <?php
 include("db.php");
-// print_r($_post);
+// print_r($_POST);
+// die;
 $name = $_FILES['image']['name'];
 $tmp_name = $_FILES['image']['tmp_name'];
 $size = $_FILES['image']['size'];
@@ -15,9 +16,11 @@ $new_name = time().rand(10000,100000).".".$ext;
 		if($size <= (1024*1024*1))
 		{
 			$a = $_POST['title'];
-			$que = "INSERT INTO slider_img(title, name) VALUES('$a', '$new_name')";
+			// print_r($_POST);
+			// die;
+			$que = "INSERT INTO slider_img (title, name) VALUES('$a', '$new_name')";
 
-			move_uploaded_file($tmp_name, "image/".$new_name);
+			move_uploaded_file($tmp_name,"slider_img/".$new_name);
 			mysqli_query($con, $que);
 			header("location:dashbord.php");
 		}

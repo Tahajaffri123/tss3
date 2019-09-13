@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 offset-md-4">
-				<h2>Admin........</h2>
+				<h1>Admin........</h1>
 			</div>
 		</div>
 	</div>

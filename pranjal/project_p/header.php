@@ -1,3 +1,9 @@
+<?php
+	$con = mysqli_connect("localhost", "root", "", "pranjal");
+	$que = "SELECT * FROM slider_img";
+	$result1 = mysqli_query($con, $que);
+?>
+
 <!DOCTYPE html>	
 <html>
 <head>
@@ -109,20 +115,15 @@
 			</form>
 		</div>
 		<div class="my-slider slider">
+			<?php
+				while($data = mysqli_fetch_assoc($result1))
+				{
+			?>
 			<div>
-				<img src="image/slider-bg.jpg" height="300" width="100%" />
+				<img src="admin/slider_img/<?php echo $data['name'];?>" height="300" width="100%" />
 			</div>
-			<div>
-				<img src="image/3.jpg" height="300" width="100%" />
-			</div>
-			<div>
-				<img src="image/4.jpg" height="300" width="100%" />
-			</div>
-			<div>
-				<img src="image/5.jpg" height="300" width="100%" />
-			</div>
-			<div>
-				<img src="image/6.jpg" height="300" width="100%" />
-			</div>
+			<?php
+			}
+			?>
 		</div>
 	</div>

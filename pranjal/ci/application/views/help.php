@@ -11,11 +11,19 @@
 		}
 	</style>
 </head>
-<body >
-	<h1 class="text-center">Thia Is About Page</h1>
-	<a href="<?php echo site_url('home/index')?>">Home</a>
+<body>
+	<h1 class="text-center">This Is Help Page</h1>
+	<a  href="<?php echo site_url('home/index')?>">Home</a>
 	<a href="<?php echo site_url('home/about')?>">About</a>
 	<a href="<?php echo site_url('home/contact')?>">Contact</a>
 	<a href="<?php echo site_url('home/help')?>">Help</a>
+	<br />
+	<br />
+
+	<h2 class="text-center"><?php echo $name; ?></h2>
+	<h2 class="text-center"><?php echo $city; ?></h2>
+	<h2 class="text-center"><?php echo $age; ?></h2>
+
+
 </body>
 </html>

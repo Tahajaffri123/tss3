@@ -1,21 +1,32 @@
 <?php
 	class Home extends CI_Controller{
-		function homepage()
+		function index()
 		{
-			$this->load->views("homepage");
+			$arr['demo']="TSS";
+			$this->load->helper("url");
+			$this->load->view("home", $arr);
 		}
 		function about()
 		{
 			//page load per views fun. me kuch bhi type kar skte h
-			$this->load->views("about");
+			$this->load->helper("url");
+			$this->load->view("about");
 		}		
 		function contact()
 		{
-			$this->load->views("contact");
+			$this->load->helper("url");
+			$this->load->view("contact");
 		}
 		function help()
 		{
-			$this->load->views("help");
+			$a = "pranjal";
+			$b = "khargone";
+
+			$arr = array("name"=>$a, "city"=>$b );
+			$arr["age"]=25;
+			
+			$this->load->helper("url");
+			$this->load->view("help", $arr);
 		}
 	}
 ?>
