@@ -65,11 +65,11 @@ min-height: 400px !important;
 }
 
 .list-group-item{
-	background-color: #A054A6;
+	background-color: #6c757d;
 }
 
 .body{
-	background-color: red;
-	     
+	background-color: #14D;
+	 color: red;    
 }
 
