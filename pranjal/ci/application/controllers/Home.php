@@ -5,6 +5,7 @@
 		{
 			parent::__construct();
 			$this->load->helper("url");
+			$this->load->library("session");
 		}
 
 
@@ -36,11 +37,11 @@
 		{
 			$this->load->library("form_validation");
 
-			$this->form_validation->set_rules("f_name", "Full Name", "required");
-			$this->form_validation->set_rules("mail", "Email/UseName", "required|valid_email");
-			$this->form_validation->set_rules("pass","Password", "required");
-			$this->form_validation->set_rules("re_pass", "Re-Password", "required|matches[pass]");
-			$this->form_validation->set_rules("cont", "Contact", "required|numeric|exact_length[10]");
+			$this->form_validation->set_rules("full_name", "Full Name", "required");
+			$this->form_validation->set_rules("username", "Email/UseName", "required|valid_email");
+			$this->form_validation->set_rules("password","Password", "required");
+			$this->form_validation->set_rules("re_pass", "Re-Password", "required|matches[password]");
+			$this->form_validation->set_rules("contact", "Contact", "required|numeric|exact_length[10]");
 			$this->form_validation->set_rules("add", "Address", "required");
 			$this->form_validation->set_rules("city", "City", "required");
 			$this->form_validation->set_rules("gender", "Gender", "required");
@@ -54,8 +55,52 @@
 			}
 			else
 			{
-				echo "yes";
+				// echo "yes";
+				// print_r($this->input->post());
+
+				$data = $this->input->post();
+				$data['address']=$data['add'];
+				unset($data['add']);
+
+				$data['password']=sha1($data['password']);
+				unset($data['re_pass']);
+
+				$this->load->model("usermod");
+				$this->usermod->save($data);
+				redirect("home/login");
+				
 			}
 		}
+
+
+		function auth()
+		{
+		// print_r($this->input->post());
+		// die;
+			$u = $this->input->post("email");
+			$p = $this->input->post("pass");
+			$this->load->model("usermod");
+			$result=$this->usermod->select_by_username($u);
+
+			if($result->num_rows()==1)
+			{
+				$data = $result->row_array();
+				if($data['password']==sha1($p))
+				{
+					echo 'yes';
+				}
+				else
+				{
+					$this->session->set_flashdata("msg", "This Password is Incorrect");
+					redirect("home/login");
+				}
+			}
+			else
+			{
+				$this->session->set_flashdata("msg", "Dosent Match Password & Re_password");
+				redirect("home/login");
+			}
+		}
+
 	}
 ?>
