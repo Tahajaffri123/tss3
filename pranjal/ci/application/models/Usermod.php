@@ -18,5 +18,11 @@
 			$result=$this->db->get("user_ci");
 			return $result;
 		}
+		function select_by_id($id)
+		{
+			$this->db->where("id", $id);
+			$result = $this->db->get("user_ci");
+			return $result; 
+		}
 	}
 ?>
