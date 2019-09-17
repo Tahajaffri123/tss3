@@ -1,5 +1,6 @@
 <?php
 include("dbinfo.php");
+// include("header.php");
 // print_r($_POST);die;
 $u = $_POST['username'];
 $p = $_POST['pass'];

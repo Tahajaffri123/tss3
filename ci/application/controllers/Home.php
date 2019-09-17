@@ -7,8 +7,6 @@ class Home extends CI_Controller{
 		$this->load->helper("url");
 	}
 
-
-
 	function about()
 	{
 		$pagedata["pagename"]="about";
@@ -27,8 +25,6 @@ class Home extends CI_Controller{
 		$pagedata['title']="Home Page";
 		$this->load->view("layout", $pagedata);
 	}
-
-
 	function login()
 	{
 		$pagedata["pagename"]="login";
@@ -59,11 +55,6 @@ class Home extends CI_Controller{
 		{
 			echo "yes";
 		}
-
-
-
-
-
 
 
 	}

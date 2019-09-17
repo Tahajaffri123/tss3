@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<style type="text/css">
-	body
-		{
-			background-color: #4FE9F2;
-		}
-	</style>
-</head>
-<body>
-	<a href="<?php echo site_url('home/index') ?>">Home</a>
-<a href="<?php echo site_url('home/about') ?>">About</a>
-<a href="<?php echo site_url('home/contact') ?>">Contact</a>
-<a href="<?php echo site_url('home/help') ?>">Help</a>
-<h1>This Is Contact Page</h1>
-</body>
-</html>
+<div class="container" style= "min-height: 600px; ">
+	<h1>Contact Page</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+</p>
+</div>
