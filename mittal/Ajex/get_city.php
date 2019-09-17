@@ -3,14 +3,14 @@ $con = mysqli_connect("localhost","root","password","mittal");
 	$que = "SELECT * FROM state ";
 	$result = mysqli_query($con, $que);
 ?>
-<!-- <!DOCTYPE html>
- --><html>
+ <!DOCTYPE html>
+ <html>
 <head>
 	<title></title>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript">
-		$.(document).ready(function(){
-		   $.("#state_id").change(function(){
+		$(document).ready(function(){
+		   $("#state_id").change(function(){
 		     var a = $(this).val(); 
 		   	  $.ajax({
 		   	  	     url : "state.php",
@@ -18,7 +18,7 @@ $con = mysqli_connect("localhost","root","password","mittal");
 		   	  	     data : {stateid : a},
 		   	  	     success : function(responce)
 		   	  	     {
-		   	  	     	 alert(responce);
+		   	  	     	 $("#city_id").html(responce);
 		   	  	     }
 		   	  })
 

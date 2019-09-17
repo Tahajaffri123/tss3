@@ -1,32 +1,61 @@
 <?php
 	class Home extends CI_Controller{
-		function index()
+
+		function __construct()
 		{
-			$arr['demo']="TSS";
+			parent::__construct();
 			$this->load->helper("url");
-			$this->load->view("home", $arr);
 		}
+
+
 		function about()
 		{
-			//page load per views fun. me kuch bhi type kar skte h
-			$this->load->helper("url");
-			$this->load->view("about");
+			$pagedata["pagename"]="about";
+			$pagedata["title"]="About Page";
+			$this->load->view("layout", $pagedata);
 		}		
 		function contact()
 		{
-			$this->load->helper("url");
-			$this->load->view("contact");
+			$pagedata["pagename"]="contact";
+			$pagedata["title"]="Contact Page";
+			$this->load->view("layout", $pagedata);
 		}
-		function help()
+		function index()
 		{
-			$a = "pranjal";
-			$b = "khargone";
+			$pagedata["pagename"]="home";
+			$pagedata["title"]="Home Page";
+			$this->load->view("layout", $pagedata);
+		}
+		function login()
+		{
+			$pagedata["pagename"]="login";
+			$pagedata["title"]="Login Page";
+			$this->load->view("layout", $pagedata);
+		}
+		function signup()
+		{
+			$this->load->library("form_validation");
 
-			$arr = array("name"=>$a, "city"=>$b );
-			$arr["age"]=25;
-			
-			$this->load->helper("url");
-			$this->load->view("help", $arr);
+			$this->form_validation->set_rules("f_name", "Full Name", "required");
+			$this->form_validation->set_rules("mail", "Email/UseName", "required|valid_email");
+			$this->form_validation->set_rules("pass","Password", "required");
+			$this->form_validation->set_rules("re_pass", "Re-Password", "required|matches[pass]");
+			$this->form_validation->set_rules("cont", "Contact", "required|numeric|exact_length[10]");
+			$this->form_validation->set_rules("add", "Address", "required");
+			$this->form_validation->set_rules("city", "City", "required");
+			$this->form_validation->set_rules("gender", "Gender", "required");
+
+
+			if($this->form_validation->run()==false)
+			{
+			$pagedata["pagename"]="signup";
+			$pagedata["title"]="SignUp Page";
+			$this->load->view("layout", $pagedata);
+			}
+			else
+			{
+				echo "yes";
+			}
 		}
 	}
 ?>
