@@ -4,10 +4,10 @@ class Home extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->helper("url");
-
 		$this->load->library("session");
 
 	}
+
 	function about()
 	{
 		$pagedata["pagename"]="about";
@@ -73,7 +73,6 @@ class Home extends CI_Controller{
 			$data['password']=sha1($data['password']);
 			unset($data['add']);
 			unset($data['re_pass']);
-
 			$this->load->model("usermod");
 			$this->usermod->save($data);
 			redirect("home/login");
@@ -97,7 +96,10 @@ class Home extends CI_Controller{
 			$data = $result->row_array();
 			if($data['password']==sha1($p))
 			{
-				echo 'yes';
+				$this->session->set_userdata("id", $data['id']);
+				$this->session->set_userdata("name", $data['full_name']);
+				$this->session->set_userdata("is_user_logged_in", true);
+				redirect("user");
 			}
 			else
 			{

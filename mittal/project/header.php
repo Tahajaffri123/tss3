@@ -95,7 +95,7 @@
 				<div class="input-group">
 					<input type="text" name= "q"  placeholder="Search Property" class="form-control">
 					<div class="input-group-append">
-						<button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search"></i></button>
+						<button type="submit" class="	btn btn-sm btn-primary"><i class="fa fa-search"></i></button>
 					</div>
 			    </div>
 			</div>
