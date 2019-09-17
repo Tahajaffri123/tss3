@@ -1,5 +1,6 @@
 <?php
 include("dbinfo.php");
+// include("header.php");
 // print_r($_POST);die;
 $u = $_POST['username'];
 $p = $_POST['pass'];
@@ -8,6 +9,7 @@ $p = $_POST['pass'];
 
 
 $result = mysqli_query($con,$que);
+// echo mysqli_num_rows($result);
 if(mysqli_num_rows($result)==1)
 {
 	$data=mysqli_fetch_assoc($result);
