@@ -4,10 +4,10 @@ class Home extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->helper("url");
-
 		$this->load->library("session");
 
 	}
+
 	function about()
 	{
 		$pagedata["pagename"]="about";
@@ -73,7 +73,6 @@ class Home extends CI_Controller{
 			$data['password']=sha1($data['password']);
 			unset($data['add']);
 			unset($data['re_pass']);
-
 			$this->load->model("usermod");
 			$this->usermod->save($data);
 			redirect("home/login");

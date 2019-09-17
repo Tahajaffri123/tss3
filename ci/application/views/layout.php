@@ -39,14 +39,9 @@
 
 <?php $this->load->view($pagename); ?>
 
-
-
-
-
-
 <div class="container-fluid bg-dark">
   <div class="container">
-    <p class="m-0 p-2 text-light text-center">Sample Footer</p>
+    <p class="m-0 p-2 text-light text-center bg-dark">Sample Footer</p>
   </div>
 </div>
 </body>

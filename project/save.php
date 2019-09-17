@@ -16,7 +16,8 @@ $f = $_POST['add'];
 $g = $_POST['city'];
 // getting POST data
 
-$query="INSERT INTO user (full_name, username, password, city, address, contact, gender) VALUES ('$a', '$b', '$c', '$g', '$f', '$d', '$e')";
+ $query="INSERT INTO user (full_name, username, password, city, address, contact, gender) VALUES ('$a', '$b', '$c', '$g', '$f', '$d', '$e')";
+
 // make query
 
 
