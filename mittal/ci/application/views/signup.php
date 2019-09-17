@@ -5,24 +5,24 @@
 			<form action="" method="post">
 				<div class="form-group">
 		             <label>Full Name</label>
-		             <input type="text" name="f_name" value="<?php echo set_value("f_name"); ?>" class="form-control" />		
+		             <input type="text" name="full_name" value="<?php echo set_value("full_name"); ?>" class="form-control" />		
 		         </div>
 		         <div class="text-danger">
-		          <?php echo form_error("f_name");	?>
+		          <?php echo form_error("full_name");	?>
 		         </div>
 		         <div class="form-group">
 		         	<label>Email</label>
-		         	<input type="text" name="email" value="<?php echo set_value("email");?>" class="form-control" />
+		         	<input type="text" name="username" value="<?php echo set_value("username");?>" class="form-control" />
 		         </div>
 		         	<div class="text-danger">
-		         		<?php echo form_error("email");?>
+		         		<?php echo form_error("username");?>
 		         	</div>
 		         	 <div class="form-group">
 		         	<label>Password</label>
-		         	<input type="password" name="pass" value="<?php echo set_value("pass");?>" class="form-control" />
+		         	<input type="password" name="password" value="<?php echo set_value("password");?>" class="form-control" />
 		         </div>
 		         	<div class="text-danger">
-		         		<?php echo form_error("pass");?>
+		         		<?php echo form_error("password");?>
 		         	</div>
 		         	 <div class="form-group">
 		         	<label>Re-Password</label>

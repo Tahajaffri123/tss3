@@ -1,3 +1,12 @@
+<?php
+include("db.php");
+$que1 = "SELECT * FROM slider_image";
+$slider= mysqli_query($conn, $que1);
+
+// print_r($data);
+
+?>
+
 <html>
 <head>
 	<title></title>
@@ -7,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/newstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/stylee.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
@@ -20,6 +29,7 @@
 	     });
 	   });
 	</script>
+
 </head>
 <body>
 <div class="container-fluid my-bg font-weight-bold">
@@ -102,15 +112,21 @@
 
 
 	<div class="my-slider slider">
-	  <div>
-	  	<img src="image/house.jpg" height="400" width="100%"/>
-	  </div>
-	  <div>
+		<?php
+		while($data1=mysqli_fetch_assoc($slider))
+		{
+		?>
+		<img src="admin/slider_img/<?php echo $data1['name'] ?>" height="400" width="100%">
+		<?php
+		}
+		?>
+	 <!--  <div>
 	  	<img src="image/house1.jpg" height="400" width="100%"/>
-	  </div>
-	  <div>
+	  </div> -->
+	 <!--  <div>
 	  	<img src="image/house2.jpg" height="400" width="100%" />
-	  </div>
+	  </div> -->
+	
 	</div>
 
 

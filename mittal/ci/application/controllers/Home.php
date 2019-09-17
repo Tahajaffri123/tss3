@@ -38,10 +38,10 @@ class Home extends CI_Controller{
 	function signup()
 	{
 		$this->load->library("form_validation");
-		$this->form_validation->set_rules("f_name","Full Name","required");
-		$this->form_validation->set_rules("email","Email/Username","required|valid_email");
-		$this->form_validation->set_rules("pass","Password","required");
-		$this->form_validation->set_rules("re-pass","Re-Password","required|matches[pass]");
+		$this->form_validation->set_rules("full_name","Full Name","required");
+		$this->form_validation->set_rules("username","Email/Username","required|valid_email");
+		$this->form_validation->set_rules("password","Password","required");
+		$this->form_validation->set_rules("re-pass","Re-Password","required|matches[password]");
 		$this->form_validation->set_rules("contact","Contact","required|numeric|exact_length[10]");
 		$this->form_validation->set_rules("add","Address","required");
 		$this->form_validation->set_rules("city","City","required");
@@ -54,7 +54,16 @@ class Home extends CI_Controller{
 	   }
 	   else
 	   {
-	   	echo "yes";
+	   	// print_r($this->input->post())
+	   	// ;die;
+	   	$data = $this->input->post();
+	   	$data['address'] = $data['add'];
+	   	$data['password'] = $data['password'];
+	   	unset($data['add']);
+	   	unset($data['re-pass']);
+        $this->load->model("usermod");
+        $this->usermod->save($data);
+        redirect("home/login");
 	   }
 	}
 }

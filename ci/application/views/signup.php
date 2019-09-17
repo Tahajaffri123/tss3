@@ -9,26 +9,26 @@
 		<form action="" method="post">
 			<div class="form-group">
 				<label>Full Name</label>
-				<input type="text" name="f_name" class="form-control" value="<?php echo set_value('f_name'); ?>" />
+				<input type="text" name="full_name" class="form-control" value="<?php echo set_value('full_name'); ?>" />
 				<div class="text-danger">
-					<?php echo form_error("f_name");?>
+					<?php echo form_error("full_name");?>
 						
 				</div>
 
 			</div>
 			<div class="form-group">
 				<label>Email</label>
-				<input type="text" name="email" class="form-control" value="<?php echo set_value('email');?>" />
+				<input type="text" name="username" class="form-control" value="<?php echo set_value('username');?>" />
 				<div class="text-danger">
-					<?php echo form_error("email");?>
+					<?php echo form_error("username");?>
 						
 				</div>
 			</div>
 			<div class="form-group">
 				<label>Password</label>
-				<input type="Password" name="pass" class="form-control" value="<?php echo set_value('pass');?>" />
+				<input type="Password" name="password" class="form-control" value="<?php echo set_value('password');?>" />
 				<div class="text-danger">
-					<?php echo form_error("pass");?>
+					<?php echo form_error("password");?>
 						
 				</div>
 			</div>
