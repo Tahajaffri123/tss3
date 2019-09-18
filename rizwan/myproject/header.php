@@ -17,7 +17,7 @@
 	    $('.slider').bxSlider({
 	    	
 	    	auto : true,
-	    	pause : 5000
+	    	pause : 3000
 	    });
 	  });
 	</script>
