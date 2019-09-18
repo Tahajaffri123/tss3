@@ -46,6 +46,11 @@ class Admin extends CI_Controller{
 			redirect('home/login');
 		}
 	}
+	function users()
+	{
+		$this->backdoor();
+		$this->load->view("admin/users");	
+	}
 
 	function dash()
 	{
