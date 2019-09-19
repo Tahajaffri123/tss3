@@ -1,9 +1,25 @@
 <div class="container" style= "min-height: 600px; ">
 	<h1>Login Page</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<form action="<?php echo site_url("home/auth")?>" method="post" >
+				<div class="form-group">
+					<label>Username</label>
+					<input type="text" class="form-control" name="email">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="password" class="form-control" name="pass">
+				</div>
+				<input type="submit" value="Login" class="btn btn-info">
+				<p class="text-center text-danger">
+				   <?php
+					echo $this->session->flashdata("msg");
+					?> 
+				</p>
+			</form>
+			</div>
+		</div>
+	</div>
 </div>
