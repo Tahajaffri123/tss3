@@ -33,8 +33,8 @@ class User extends CI_Controller{
 		{
 			if($b == $c)
 			{
-				$arr['password']=sha1($b);
-				$this->usermod->update_by_id($this->id, $arr);
+				$ar['password']=sha1($b);
+				$this->usermod->update_by_id($this->id, $ar);
 				redirect("user/profile");
 			}
 			else

@@ -1,0 +1,18 @@
+a{
+	color: #FFF;
+	display: inline-block;
+	background-color: black;
+	padding: 8px;
+	margin: 2px;
+	text-decoration: none !important; 	
+}
+
+h1{
+	color: #FFF;
+	margin: 230px 0px 0px 600px;
+}
+
+h3{
+	color: orange;
+	margin-left: 700px;
+}
