@@ -21,7 +21,7 @@ if(isset($_GET['type']))
 
 $result = mysqli_query($con, $que);
 
-$que1 = "SELECT * FROM slider_image";
+$que1 = "SELECT * FROM `silder_image`";
 $slider= mysqli_query($con, $que1);
 
 
@@ -41,17 +41,19 @@ $slider= mysqli_query($con, $que1);
 			</div>
 		</div>
 	<div class="my-slider slider ">
-	<div>
 		<?php
-		while($data1=mysqli_fetch_assoc($slider))
-		{
-		?>
-		<img src="../admin/slider_img/<?php echo $data1['name'] ?>" height="300" width="100%">
+			while($data=mysqli_fetch_assoc($slider))
+			{
+			?>
+		<div>
+			<img src="admin/slider_img/<?php echo $data['name'] ?>" height="400" width="100%">
+		</div>
 		<?php
-		}
-		?>
-
+			}
+			?>
 	</div>
+
+	<!-- </div>
 	  <div>
 	  	<img src="image/20.jpg" height="400" width="100%"/>
 	  </div>
@@ -62,7 +64,7 @@ $slider= mysqli_query($con, $que1);
 	  	<img src="image/5.jpg" height="400" width="100%"/>
 	  </div>
 	</div>
-
+ -->
 <div class="container content">
 	<div class="row">
 		<div class="col-md-3">

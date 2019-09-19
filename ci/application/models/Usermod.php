@@ -17,9 +17,10 @@ class Usermod extends CI_Model{
 	{
 
 	}
-	function update()
+	function update_by_id($id, $data)
 	{
-
+		$this->db->where("id", $id);
+		$this->db->update("user_ci", $data);
 	}
 	function select_by_username($u)
 	{
