@@ -49,7 +49,9 @@ class Admin extends CI_Controller{
 	function users()
 	{
 		$this->backdoor();
-		$this->load->view("admin/users");	
+		$this->load->model("usermod");
+		$result = $this->usermod->select_all();
+		$this->load->view("admin/users", array("info"=>$result));	
 	}
 
 	function dash()
@@ -62,8 +64,16 @@ class Admin extends CI_Controller{
 		$this->session->sess_destroy();
 		redirect("home/login");
 	}
-
-
+	function change_status($a, $b)
+	{
+		if($b==0)
+			$arr['status']=1;
+		if($b==1)
+			$arr['status']=0;
+		$this->load->model("usermod");
+		$this->usermod->update_by_id($a, $arr);
+		redirect("admin/users");
+	}
 }
 
 
