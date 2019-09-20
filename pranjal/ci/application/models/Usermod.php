@@ -24,5 +24,10 @@
 			$result = $this->db->get("user_ci");
 			return $result; 
 		}
+		function update_by_id($id, $data)
+		{
+			$this->db->where("id", $id);
+			$this->db->update("user_ci", $data);
+		}
 	}
 ?>
