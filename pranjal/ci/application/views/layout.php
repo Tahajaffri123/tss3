@@ -24,12 +24,30 @@
 				<li class="nav-item">
 					<a href="<?php echo site_url("home/contact")?>" class="nav-link text-light">Contact</a>
 				</li>
+				<?php 
+					if($this->session->userdata("is_user_logged_in"))
+					{
+				?>
+				<li class="nav-item">
+					<a href="<?php echo site_url("user")?>" class="nav-link">Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo site_url("user/profile")?>" class="nav-link">My Profile</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo site_url("user/logout")?>" class="nav-link">Logout</a>
+				</li>
+				<?php 
+				}
+				else{
+				?>
 				<li class="nav-item">
 					<a href="<?php echo site_url("home/login")?>" class="nav-link text-light">Login</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo site_url("home/signup")?>" class="nav-link text-light">SignUp</a>
 				</li>
+			<?php }?>
 			</ul>
 		</div>
 	</nav>
