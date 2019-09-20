@@ -36,6 +36,11 @@
 					<td><?php echo $data['gender']; ?></td>
 				</tr>
 			</table>
+			<div>
+				<a href="<?php echo site_url("user/edit")?>" class="btn btn-info">Edit</a>
+				<a href="<?php echo site_url("user/change_password")?>" class="btn btn-info">Change Password</a>
+
+			</div>
 		 </div>
 	  </div>
    </div>
