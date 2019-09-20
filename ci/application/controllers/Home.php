@@ -96,10 +96,19 @@ class Home extends CI_Controller{
 			$data = $result->row_array();
 			if($data['password']==sha1($p))
 			{
+				if($data['status']==1)
+				{
+
 				$this->session->set_userdata("id", $data['id']);
 				$this->session->set_userdata("name", $data['full_name']);
 				$this->session->set_userdata("is_user_logged_in", true);
 				redirect("user");
+				}
+				else
+				{
+					$this->session->set_flashdata("msg", "Your Account is Deativated !");
+					redirect("home/login");				
+				}
 			}
 			else
 			{

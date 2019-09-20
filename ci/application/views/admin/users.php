@@ -32,7 +32,7 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 offset-md-2">
+			<div class="col-md-10 offset-md-1">
 				<h4>List all registred user</h4>
 				<table class="table table-hover table-dark table-bordered">
 					<tr>
@@ -40,7 +40,33 @@
 						<th>Full Name</th>
 						<th>Email</th>
 						<th>Contact</th>
+						<th>Status</th>
+						<th>Change</th>
 					</tr>
+					<?php
+					$n=1;
+					foreach($info->result_array() as $data)
+					{ 
+						if($data['status']==1){
+							$a = "Active";
+						}
+						else{
+							$a = "Deactive";
+
+						}
+						?>
+						<tr>
+							<td><?php echo $n; ?></td>
+							<td><?php echo $data['full_name']; ?></td>
+							<td><?php echo $data['username']; ?></td>
+							<td><?php echo $data['contact']; ?></td>
+							<td><?php echo $a; ?></td>
+							<td><a href="<?php echo site_url('admin/change_status/'.$data['id'].'/'.$data['status']); ?>" class="btn btn-sm btn-warning">Change</a></td>
+						</tr>
+					<?php
+					$n++;
+					}
+					?>
 				</table>
 			</div>
 		</div>

@@ -25,6 +25,18 @@ class Usermod extends CI_Model{
 		$result=$this->db->get("ci_user");
 		return $result;
 	}
+	function select_by_id($id)
+	{
+		$this->db->where("id", $id);
+		$result = $this->db->get("ci_user");
+		return $result;
+	}
+	function update_by_id($id, $data)
+	{
+		$this->db->where("id", $id);
+		$this->db->update("ci_user", $data);
+	}
+
 
 }
 
