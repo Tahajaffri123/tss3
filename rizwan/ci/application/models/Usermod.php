@@ -19,6 +19,10 @@ class Usermod extends CI_Model{
 	{
 
 	}
+	function select_all()
+	{
+		return $this->db->get("ci_user");
+	}
 	function select_by_username($u)
 	{
 		$this->db->where("username", $u);

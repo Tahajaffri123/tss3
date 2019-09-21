@@ -99,6 +99,35 @@ class User extends CI_Controller{
 			redirect("user/change_pass");
 		}
 	}
+	function image_upload()
+	{
+
+		$config["upload_path"]="images/";
+		$config["allowed_types"]="png|jpg|jpeg|gif";
+		$config["max_size"]=1024;
+		
+		$config['encrypt_name']=true;
+
+
+		$this->load->library("upload", $config);
+		if($this->upload->do_upload()==true)
+		{
+			// print_r($this->upload->data());
+			// die;
+			$name=$this->upload->data("file_name");
+			$arr['image']=$name;
+			$this->usermod->update_by_id($this->id, $arr);
+			redirect("user/profile");
+		}
+		else
+			{
+			$a = $this->upload->display_errors();
+			$this->session->set_flashdata("msg", $a);
+			redirect("user/profile");
+			}
+	}
 }
+
+
 
 ?>

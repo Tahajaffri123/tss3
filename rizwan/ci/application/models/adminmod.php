@@ -12,6 +12,7 @@ class Adminmod extends CI_Model{
 		$this->db->where("username", $u);
 		return $this->db->get("admin_ci");
 	}
+	
 }
 
 

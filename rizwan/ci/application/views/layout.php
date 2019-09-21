@@ -9,7 +9,6 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
   <a class="navbar-brand" href="#">CI</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
