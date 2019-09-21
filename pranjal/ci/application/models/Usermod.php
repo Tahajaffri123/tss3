@@ -29,5 +29,10 @@
 			$this->db->where("id", $id);
 			$this->db->update("user_ci", $data);
 		}
+		function select_all()
+		{
+			// print_r($this->input->post());
+			return $this->db->get("user_ci");
+		}
 	}
 ?>

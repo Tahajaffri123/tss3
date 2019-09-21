@@ -88,11 +88,19 @@
 				if($data['password']==sha1($p))
 				{
 					// echo 'yes';
+					if($data['status']==1)
+					{
 					$this->session->set_userdata("id", $data['id']);
 					$this->session->set_userdata("name", $data['full_name']);
 					$this->session->set_userdata("is_user_logged_in", true);
 					redirect("user");
 				}
+				else
+				{
+					$this->session->set_flashdata("msg", "Your Account Was Deactivated !");
+					redirect("home/login");
+				}
+			}
 				else
 				{
 					$this->session->set_flashdata("msg", "This Password is Incorrect !");
@@ -101,7 +109,7 @@
 			}
 			else
 			{
-				$this->session->set_flashdata("msg", "Dosen't Match Password & Re_password");
+				$this->session->set_flashdata("msg", "This Username & Password are Incorrect ");
 				redirect("home/login");
 			}
 		}
