@@ -1,11 +1,23 @@
-
+<script>
+	$(document).ready(function(){
+		$("#file").change(function(){
+			$("#my_from").submit();
+		});
+	});
+</script>
 <div class="container" style="min-height: 600px;">
 	<h2>My Profile</h2>
 	<div class="row">
 		<div class="col-md-6 offset-md-3">
 			<?php 
-				// $data = $result->row_array();
-				// print_r($data);
+				if($data['image']=="")
+				{
+					$path=base_url("images/avatar.png");
+				}
+				else
+				{
+					$path=base_url("images/".$data['image']);
+				}
 			 ?>
 			<table class="table table-hover table-bordered">
 				<tr>
@@ -16,6 +28,18 @@
 					<td>Username/Email</td>
 					<td><?php echo $data['username'] ?></td>
 				</tr>
+				<form id="my_from" action="<?php echo site_url('user/image_upload') ?>" method="post" enctype="multipart/form-data">
+					
+				<tr>
+					<td>Image</td>
+					<td><img src="<?php echo $path; ?>" heighit="80" width="80"/><br />
+						<input id="file" name="userfile" type="file" />
+					<small class="text-danger">
+						<?php echo $this->session->flashdata("msg"); ?>
+					</small>
+					</td>
+				</tr>
+				</form>
 				<tr>
 					<td>Address</td>
 					<td><?php echo $data['address'] ?></td>

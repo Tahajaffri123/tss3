@@ -15,7 +15,8 @@ class Usermod extends CI_Model{
 	}
 	function delete()
 	{
-
+		$this->db->where("id", $id);
+		$this->db->delete("user_ci");
 	}
 	function select_all()
 	{

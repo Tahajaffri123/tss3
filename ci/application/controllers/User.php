@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 class User extends CI_Controller{
@@ -14,6 +15,38 @@ class User extends CI_Controller{
 
 
 	}
+	function image_upload()
+	{
+		$config["upload_path"]="images/";
+		$config["allowed_types"]="png|jpg|jpeg|gif";
+		$config["max_size"]=1024;
+		
+		$config['encrypt_name']=true;
+
+
+		$this->load->library("upload", $config);
+		if($this->upload->do_upload()==true)
+		{
+			// print_r($this->upload->data());
+			$name = $this->upload->data("file_name");
+			$arr['image']=$name;
+
+			$this->usermod->update_by_id($this->id, $arr);
+			redirect("user/profile");
+			// $this->usermod->update_by_id($this->id, array("image"=>$this->upload->data('file_name')));
+		}
+		else
+		{
+			$a = $this->upload->display_errors();
+			$this->session->set_flashdata("msg", $a);
+			redirect("user/profile");
+		}
+
+	}
+
+
+
+
 	function index()
 	{
 		$pagedata['title']="Dashboard";
@@ -33,8 +66,8 @@ class User extends CI_Controller{
 		{
 			if($b == $c)
 			{
-				$arr['password']=sha1($b);
-				$this->usermod->update_by_id($this->id, $arr);
+				$ar['password']=sha1($b);
+				$this->usermod->update_by_id($this->id, $ar);
 				redirect("user/profile");
 			}
 			else
